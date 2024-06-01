@@ -6,12 +6,12 @@ import Work from "./Work";
 
 const Main = () => {
   return (
-    <>
+    <main>
       <Intro></Intro>
       <About></About>
       <Port></Port>
       <Work></Work>
-    </>
+    </main>
   )
 }
 
