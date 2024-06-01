@@ -1,5 +1,6 @@
 body {
   background-color: var(--mainBg-color);
   font-family: var(--font-poppins);
+  color: #222;
 }
 .italic { font-style: italic; }
