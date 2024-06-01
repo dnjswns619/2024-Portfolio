@@ -1,0 +1,43 @@
+.intro {
+  position: relative;
+  width: 100%;
+  height: max(400vh, 1890px);
+  &__inner {
+    @include flexCol-center;
+    @include position-sticky;
+    width: 100%;
+    height: max(100vh, 945px);
+    padding: 0 5vw;
+    overflow: hidden;
+  }
+  &__tit {
+    @include flexCol-center;
+    position: relative;
+    width: 100%;
+    &--text {
+      font-family: var(--font-eng);
+      font-size: 14rem;
+      line-height: 1;
+      span {
+        display: block;
+        font-family: var(--font-now);
+        font-size: 7rem;
+        color: var(--color-point)
+      }
+    }
+  }
+  &__desc {
+    @include flexCol-center;
+    font-size: 1.2rem;
+    color: #4e4e4e
+  }
+  &__ball {
+    position: absolute;
+    top: -15vw;
+    right: 10px;
+    width: 15vw;
+    height: 15vw;
+    background-color: #222222;
+    border-radius: 50%;
+  }
+}
