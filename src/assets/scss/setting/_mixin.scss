@@ -4,6 +4,14 @@
   align-items: center;
   justify-content: center;
 }
+
+// 세로 && 가운데 정렬
+@mixin flexCol-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
   
 // 양쪽 정렬
 @mixin flex-between {
@@ -26,4 +34,11 @@
   left: 0;
   top: 0;
   width: 100%;
+}
+
+// sticky
+@mixin position-sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
 }
