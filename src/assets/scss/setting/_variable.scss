@@ -1,7 +1,12 @@
 :root {
   --mainBg-color: #f3ede8;
-}
+  --font-poppins: 'poppins';
+  --font-eng: 'bodoni';
+  --font-now: 'now';
+  --font-nowB: 'nowB';
+  --color-point: #1b6856;
 
-body {
-  background-color: var(--mainBg-color);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
