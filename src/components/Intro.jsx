@@ -17,15 +17,12 @@ const Intro = () => {
     })
 
     const windowHeight = window.innerHeight;
-    const windowWidth = window.innerWidth;
     const ballWidth = document.querySelector(".intro__ball").offsetWidth;
-    const ballHeight = document.querySelector(".intro__ball").offsetHeight;
+    const titWidth = document.querySelector(".intro__tit--change").offsetWidth
     introAnimation
-    .to(".intro__ball", { y: () => (windowHeight / 2) + (ballHeight / 2) })
-    .to(".intro__ball", { y: () => (windowHeight / 2) })
-    .to(".intro__ball", { y: () => (windowHeight / 2) + (ballHeight / 2) })
-    .to(".intro__ball", { x: () => -((windowWidth / 2) - (ballWidth / 2) - 10), rotate: -360, borderRadius: 20 }, "a")
-    .to(".intro__ball", {scale: 10})
+    .to(".intro__ball", { y: () => windowHeight + 30 })
+    .to(".intro__ball", { x: () => -((titWidth / 2) + (ballWidth / 2)), rotate: -360, borderRadius: 20 }, "a")
+    .to(".intro__ball", {y: () => windowHeight * 2 - 30}, "a+=0.1")
 
     return () => {
       introAnimation.kill();
@@ -35,12 +32,14 @@ const Intro = () => {
     <section id="intro" className="intro">
       <div className="intro__inner">
         <div className="intro__tit">
-          <h2 className="intro__tit--text intro__tit--default">
+          <h2 className="intro__tit--text">
             <span>JUN'S</span>
-            PORTFOLIO
+          </h2>
+          <h2 className="intro__tit--text intro__tit--change">
+            PORTFOLI
+            <span className="intro__ball"></span>
           </h2>
         </div>
-        <div className="intro__ball"></div>
       </div>
     </section>
   )
