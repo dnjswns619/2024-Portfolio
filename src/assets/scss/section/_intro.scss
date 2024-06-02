@@ -7,14 +7,15 @@
     @include position-sticky;
     width: 100%;
     height: max(100vh, 945px);
-    padding: 0 5vw;
+    padding: 0 4.6vw;
     overflow: hidden;
   }
   &__tit {
     @include flexCol-center;
-    position: relative;
     width: 100%;
+    mix-blend-mode: hard-light;
     &--text {
+      position: relative;
       font-family: var(--font-eng);
       font-size: 14rem;
       line-height: 1;
@@ -33,11 +34,12 @@
   }
   &__ball {
     position: absolute;
-    top: -15vw;
-    right: 10px;
-    width: 15vw;
-    height: 15vw;
-    background-color: #222222;
+    transform-origin: top center;
+    top: -100vh;
+    right: -10rem;
+    width: 10rem;
+    height: 10rem;
+    background-color: var(--darkBg-color);
     border-radius: 50%;
   }
 }
