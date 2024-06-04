@@ -15,14 +15,9 @@ const Intro = () => {
         markers: true
       }
     })
-
-    const windowHeight = window.innerHeight;
-    const ballWidth = document.querySelector(".intro__ball").offsetWidth;
-    const titWidth = document.querySelector(".intro__tit--change").offsetWidth
     introAnimation
-    .to(".intro__ball", { y: () => windowHeight + 30 })
-    .to(".intro__ball", { x: () => -((titWidth / 2) + (ballWidth / 2)), rotate: -360, borderRadius: 20 }, "a")
-    .to(".intro__ball", {y: () => windowHeight * 2 - 30}, "a+=0.1")
+    .to(".intro__tit", {"--circle": () => 0 + "%"}, "a")
+    .to(".intro__desc", {"--scale": 1}, "a")
 
     return () => {
       introAnimation.kill();
@@ -39,6 +34,11 @@ const Intro = () => {
             PORTFOLI
             <span className="intro__ball"></span>
           </h2>
+        </div>
+        <div className="intro__desc">
+          <p>qweqwe</p>
+          <div className="intro__desc--circle"></div>
+          <p>qweqwe</p>
         </div>
       </div>
     </section>
