@@ -11,9 +11,14 @@
     overflow: hidden;
   }
   &__tit {
+    --circle: 100%;
+    @include position-center;
     @include flexCol-center;
     width: 100%;
+    height: 100%;
     mix-blend-mode: hard-light;
+    background-color: var(--mainBg-color);
+    clip-path: circle(var(--circle) at 50% 50%);
     &--text {
       position: relative;
       font-family: var(--font-eng);
@@ -28,9 +33,27 @@
     }
   }
   &__desc {
-    @include flexCol-center;
-    font-size: 1.2rem;
-    color: #4e4e4e
+    --scale: 60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: 50% 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(var(--scale));
+    font-size: 40px;
+    &--circle {
+      width: 2rem;
+      height: 2rem;
+      border:  2px solid green;
+    }
+    p {
+      color: red;
+      flex-grow: 1;
+    }
   }
   &__ball {
     position: absolute;
@@ -43,3 +66,4 @@
     border-radius: 50%;
   }
 }
+body {background-color: #000;}
