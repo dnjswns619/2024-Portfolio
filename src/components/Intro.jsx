@@ -1,28 +1,52 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import introCircle from "../assets/images/intro_circle0.jpg";
+import introCircle2 from "../assets/images/intro_circle1.jpg";
+import { introText } from "../constants"; 
 
 const Intro = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+    const descItemMiddle = document.querySelector(".desc__item--middle");
+    const contentCenter = window.innerWidth - descItemMiddle.offsetWidth;
+    gsap.set(".desc__item--middle .desc__item--img:nth-child(3 of .desc__item--img)", {autoAlpha: 0})
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: "#intro",
+        start: "55% 100%",
+        end: "70% 100%",
+        onLeaveBack: () => {
+          gsap.set(".desc__item--middle .desc__item--img:nth-child(3 of .desc__item--img)", {autoAlpha: 0})
+        },
+        onEnter: () => {
+          gsap.to(".desc__item--middle .desc__item--img:nth-child(3 of .desc__item--img)", {autoAlpha: 1})
+        }
+      }
+    })
 
-    const introAnimation = gsap.timeline({
+    const introScaleAnimation = gsap.timeline({
       scrollTrigger: {
         trigger: "#intro",
         start: "0% 0%",
         end: "100% 100%",
         scrub: 0,
-        markers: true
       }
     })
-    introAnimation
+    
+    introScaleAnimation
     .to(".intro__tit", {"--circle": () => 0 + "%"}, "a")
     .to(".intro__desc", {"--scale": 1}, "a")
-
+    .to(".intro__desc .desc__item--top" , {xPercent: -3}, "b")
+    .to(".intro__desc .desc__item--middle" , {xPercent: 3}, "b")
+    .to(".intro__desc .desc__item--bottom" , {xPercent: -3}, "b")
     return () => {
-      introAnimation.kill();
+      introScaleAnimation.kill();
     }
   }, [])
+  const introTopText = introText.top;
+  const introMiddleText = introText.middle;
+  const introBottomText = introText.bottom;
   return (
     <section id="intro" className="intro">
       <div className="intro__inner">
@@ -31,14 +55,48 @@ const Intro = () => {
             <span>JUN'S</span>
           </h2>
           <h2 className="intro__tit--text intro__tit--change">
-            PORTFOLI
-            <span className="intro__ball"></span>
+            PORTFOLIO
           </h2>
         </div>
         <div className="intro__desc">
-          <p>qweqwe</p>
-          <div className="intro__desc--circle"></div>
-          <p>qweqwe</p>
+          <div className="intro__desc--row desc__item desc__item--top">
+            {
+              introTopText.map((arr, idx) => {
+                return (
+                  <>
+                    <div className={arr.class}>{arr.text}</div>
+                    <img className="desc__item--img" src={idx % 2 === 0 ? introCircle : introCircle2} alt="" />
+                  </>
+                )
+              })
+            }
+          </div>
+          <div className="intro__desc--row desc__item desc__item--middle">
+            {
+                introMiddleText.map((arr, idx) => {
+                  return (
+                    <>
+                      <div className={arr.class}>{arr.text}</div>
+                      {
+                        idx % 2 === 0 ? <img className="desc__item--img" src={introCircle} alt="" /> : 
+                        idx === 5 ? null : <img className="desc__item--img" src={introCircle2} alt="" />}
+                    </>
+                  )
+                })
+              }
+          </div>
+          <div className="intro__desc--row desc__item desc__item--bottom">
+            {
+              introBottomText.map((arr, idx) => {
+                return (
+                  <>
+                    <img className="desc__item--img" src={idx % 2 === 0 ? introCircle : introCircle2} alt="" />
+                    <div className={arr.class}>{arr.text}</div>
+                  </>
+                )
+              })
+            }
+          </div>
         </div>
       </div>
     </section>
