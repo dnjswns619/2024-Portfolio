@@ -1,5 +1,5 @@
 body {
-  background-color: var(--mainBg-color);
+  background-color: #000;
   font-family: var(--font-poppins);
   color: #222;
 }
