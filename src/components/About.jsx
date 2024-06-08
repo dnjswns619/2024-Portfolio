@@ -119,10 +119,12 @@ const About = () => {
                 <img src={aboutImg5} alt="" className="item2__img-box--img" />
               </div>
               <p className="item__main-text">
-              <span className="item__main-text--point">웹 표준</span>과 <span className="item__main-text--point">웹 접근성</span>을 준수하는 웹사이트를 만듭니다.<br />
+                <span className="item__main-text--point">웹 표준</span>과 <span className="item__main-text--point">웹 접근성</span>을 준수하는 웹사이트를 만듭니다.<br />
                 html, css를 조합하여 컨텐츠를 능숙하게 구현할 수 있으며,<br />
-                다른 사람이 짜놓은 js를 이해하고 응용, 수정할 수 있습니다.<br />
-                현재는 더욱 성장하기 위해 react와 js를 공부하고 있습니다.<br />
+                다른 사람이 짜놓은 js를 이해하고 응용, 수정할 수 있습니다.
+              </p>
+              <p className="item__sub-text">
+                현재는 더욱 성장하기 위해 react와<br />js를 꾸준히 공부하고 있습니다.
               </p>
             </div>
           </div>
