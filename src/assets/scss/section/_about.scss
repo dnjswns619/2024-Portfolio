@@ -80,6 +80,9 @@
       }
     }
     .item2 {
+      .item__sub-text {
+        left: 50rem;
+      }
       &__img-box {
         overflow: hidden;
         position: absolute;
