@@ -49,6 +49,10 @@ const About = () => {
         start: "0% 0%",
         end: "33.333% 20%",
         scrub: 0,
+        onEnter: () => {
+          gsap.fromTo(".item1 .item__main-text", { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: -20, duration: 1 })
+          gsap.fromTo(".item1 .item__sub-text", { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: 0, duration: 1 })
+        }
       }
     })
     aboutDesc1Animation
@@ -63,7 +67,11 @@ const About = () => {
         start: "50% 100%",
         end: "100% 100%",
         scrub: 0,
-        markers: true
+        markers: true,
+        onEnter: () => {
+          gsap.fromTo(".item2 .item__main-text", { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: -20, duration: 1 }, "b+=1.2")
+          gsap.fromTo(".item2 .item__sub-text", { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: 0, duration: 1 }, "b+=1.2")
+        }
       }
     })
     aboutDesc2Animation
