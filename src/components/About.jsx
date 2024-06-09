@@ -56,10 +56,10 @@ const About = () => {
       }
     })
     aboutDesc1Animation
-    .to(".about__desc .item1__img-box--1", {xPercent: 50}, "a")
-    .to(".about__desc .item1__img-box--2", {xPercent: -80}, "a")
-    .to(".about__desc .item1__img-box--3", {xPercent: -50}, "a")
-    .to(".about__desc .item1__img-box--4", {xPercent: -30}, "a")
+    .to(".about__desc .item1__img-box--1", {xPercent: 60, yPercent: -10}, "a")
+    .to(".about__desc .item1__img-box--2", {xPercent: -90, yPercent: 10}, "a")
+    .to(".about__desc .item1__img-box--3", {xPercent: -70, yPercent: 10}, "a")
+    .to(".about__desc .item1__img-box--4", {xPercent: -70, yPercent: 10}, "a")
 
     const aboutDesc2Animation = gsap.timeline({
       scrollTrigger: {
@@ -69,8 +69,8 @@ const About = () => {
         scrub: 0,
         markers: true,
         onEnter: () => {
-          gsap.fromTo(".item2 .item__main-text", { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: -20, duration: 1 }, "b+=1.2")
-          gsap.fromTo(".item2 .item__sub-text", { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: 0, duration: 1 }, "b+=1.2")
+          gsap.fromTo(".item2 .item__main-text", { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: -20, duration: 1 })
+          gsap.fromTo(".item2 .item__sub-text", { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: 0, duration: 1 })
         }
       }
     })
