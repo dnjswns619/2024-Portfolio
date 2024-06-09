@@ -14,7 +14,7 @@ const Intro = () => {
     gsap.timeline({
       scrollTrigger: {
         trigger: "#intro",
-        start: "55% 100%",
+        start: "65% 100%",
         end: "70% 100%",
         onLeaveBack: () => {
           gsap.set(".desc__item--middle .desc__item--img:nth-child(3 of .desc__item--img)", {autoAlpha: 0})
@@ -29,7 +29,7 @@ const Intro = () => {
       scrollTrigger: {
         trigger: "#intro",
         start: "0% 0%",
-        end: "100% 100%",
+        end: "100% 0%",
         scrub: 0,
       }
     })
@@ -37,9 +37,9 @@ const Intro = () => {
     introScaleAnimation
     .to(".intro__tit", {"--circle": () => 0 + "%"}, "a")
     .to(".intro__desc", {"--scale": 1}, "a")
-    .to(".intro__desc .desc__item--top" , {xPercent: -3}, "b")
-    .to(".intro__desc .desc__item--middle" , {xPercent: 3}, "b")
-    .to(".intro__desc .desc__item--bottom" , {xPercent: -3}, "b")
+    .to(".intro__desc .desc__item--top" , {xPercent: -5}, "b")
+    .to(".intro__desc .desc__item--middle" , {xPercent: 5}, "b")
+    .to(".intro__desc .desc__item--bottom" , {xPercent: -5}, "b")
     return () => {
       introScaleAnimation.kill();
     }
