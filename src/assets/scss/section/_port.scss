@@ -1,0 +1,139 @@
+.port {
+  &__wrap {
+    @include flexCol-center;
+    gap: 7vw;
+    width: 100%;
+  }
+  &__title {
+    @include flex-center;
+    height: 100vh;
+    font-family: var(--font-iropke);
+    font-size: 10vw;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+    &--desc {
+      flex: 0 0 30%;
+      text-align: center;
+    }
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      &__title {
+        width: 100%;
+        font-family: var(--font-caorgen);
+        font-size: 4vw;
+        color: var(--color-point);
+        border-bottom: 1px solid var(--color-point);
+      }
+      &__skill {
+        display: flex;
+        width: 100%;
+        &--tit {
+          width:30%;
+          text-align: center;
+        }
+        &--text {
+          width: 70%;
+          text-align: left;
+          text-transform: capitalize;
+        }
+      }
+      &__desc {
+        display: flex;
+        width: 100%;
+        &--tit {
+          width:30%;
+          text-align: center;
+        }
+        &--text {
+          width: 70%;
+          text-align: left;
+          text-transform: capitalize;
+        }
+      }
+      &__git-link {
+        display: flex;
+        width: 100%;
+        &--tit {
+          width:30%;
+          text-align: center;
+        }
+        &--text {
+          width: 70%;
+          text-align: left;
+          text-transform: capitalize;
+        }
+      }
+    }
+    &--img {
+      position: relative;
+      flex-shrink: 0;
+      width: 35vw;
+      height: 20vw;
+      padding: 4px;
+      border-radius: 20px;
+    }
+    .imgBox {
+      &__left { transform: rotate(-10deg); }
+      &__right { transform: rotate(10deg); }
+      &:hover {
+        .imgBox__front {
+          transform: rotateY(180deg);
+          opacity: 0;
+        }
+        .imgBox__behind {
+          transform: rotateY(0);
+          opacity: 1;
+        }
+      }
+      &__item {
+        position: absolute; top: 0; left: 0;
+      }
+      &__front {
+        opacity: 1;
+        transform: rotateY(0);
+        transition: all 1s ease-in-out;
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        background: url(../../images/card.png) center / cover no-repeat;
+        border-radius: 16px;
+        h2 {
+          @include flexCol-center;
+          width: 100%;
+          height: 100%;
+          border: 2px solid var(--mainBg-color);
+          border-radius: 11px;
+          font-family: var(--font-caorgen);
+          font-size: 3vw;
+          color: var(--mainBg-color);
+          span {
+            font-size: 2vw;
+          }
+        }
+      }
+      &__behind {
+        opacity: 0;
+        overflow: hidden;
+        transform: rotateY(180deg);
+        transition: all 1s ease-in-out;
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        border-radius: 16px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+}
