@@ -123,3 +123,79 @@ export const portContent = [
     imgSrc: "intro_circle0"
   }
 ]
+
+export const workImg = [
+  {
+    imgSrc: "0000 (2)"
+  },
+  {
+    imgSrc: "0000 (3)"
+  },
+  {
+    imgSrc: "0000 (4)"
+  },
+  {
+    imgSrc: "0000 (5)"
+  },
+  {
+    imgSrc: "0000 (6)"
+  },
+  {
+    imgSrc: "0000 (7)"
+  },
+  {
+    imgSrc: "0000 (8)"
+  },
+  {
+    imgSrc: "0000 (9)"
+  },
+  {
+    imgSrc: "0000 (10)"
+  },
+  {
+    imgSrc: "0000 (11)"
+  },
+  {
+    imgSrc: "0000 (12)"
+  },
+  {
+    imgSrc: "0000 (13)"
+  },
+  {
+    imgSrc: "0000 (14)"
+  },
+  {
+    imgSrc: "0000 (15)"
+  },
+  {
+    imgSrc: "0000 (16)"
+  },
+  {
+    imgSrc: "0000 (17)"
+  },
+  {
+    imgSrc: "0000 (18)"
+  },
+  {
+    imgSrc: "0000 (19)"
+  },
+  {
+    imgSrc: "0000 (20)"
+  },
+  {
+    imgSrc: "0000 (21)"
+  },
+  {
+    imgSrc: "0000 (22)"
+  },
+  {
+    imgSrc: "0000 (23)"
+  },
+  {
+    imgSrc: "0000 (24)"
+  },
+  {
+    imgSrc: "0000 (25)"
+  },
+
+]
