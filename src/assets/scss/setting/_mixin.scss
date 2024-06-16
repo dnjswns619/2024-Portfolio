@@ -38,6 +38,7 @@
 
 // sticky
 @mixin position-sticky {
+  overflow: hidden;
   position: sticky;
   top: 0;
   left: 0;
