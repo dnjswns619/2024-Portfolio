@@ -28,17 +28,27 @@
       width: 100vw;
     }
     .item {
-      &__main-text {
-        font-size: 2vw;
-        &--point {
-          color: var(--color-point);
+      &__main-num { 
+        font-size: 7vw;
+        color: #e65100;
+        &--sub {
+          font-size: 5vw;
         }
+      }
+      &__main-keyword {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 2vw;
+        font-family: var(--font-jua);
+        &--text { font-size: 1.5vw; }
       }
       &__sub-text {
         position: absolute;
         top: 11rem;
-        left: 13rem;
-        font-size: 1vw;
+        left: 23rem;
+        font-family: var(--font-jua);
+        font-size: 1.2vw;
       }
     }
     .item1 {
@@ -59,6 +69,7 @@
           bottom: 13rem;
           width: 10rem;
           height: 10rem;
+          
         }
         &--3 {
           top: 3rem;
@@ -89,15 +100,15 @@
         border-radius: 100%;
         &--1 {
           top: 6rem;
-          left: -11rem;
+          left: 7rem;
           width: 17rem;
           height: 17rem;
         }
         &--2 {
           left: 70rem;
           bottom: 13rem;
-          width: 6rem;
-          height: 6rem;
+          width: 10rem;
+          height: 10rem;
         }
         &--3 {
           top: 11rem;
@@ -106,7 +117,7 @@
           height: 13rem;
         }
         &--4 {
-          left: 20rem;
+          left: 12rem;
           bottom: 2rem;
           width: 19rem;
           height: 19rem;

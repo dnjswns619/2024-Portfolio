@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import aboutImg0 from "../assets/images/about00.svg";
 import aboutImg1 from "../assets/images/about01.svg";
 import aboutImg2 from "../assets/images/about02.svg";
@@ -10,26 +10,42 @@ import aboutImg7 from "../assets/images/about_react.svg"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
+const easeOutQuad = (t) => t * (2 - t);
+
+const UseCountUp = ({ targetNumber, duration }) => {
+  const [currentNumber, setCurrentNumber] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const end = parseInt(targetNumber, 10);
+    let startTime = null;
+
+    const animate = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      let progress = timestamp - startTime;
+      let percent = Math.min(progress / duration, 1);
+      percent = easeOutQuad(percent);
+
+      setCurrentNumber(Math.floor(percent * end));
+
+      if (progress < duration) {
+        requestAnimationFrame(animate);
+      } else {
+        setCurrentNumber(end);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [targetNumber, duration]);
+
+  return (
+    <span className="countNum">{currentNumber}</span>
+  )
+}
+
 const About = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-
-    gsap.to("body", {
-      scrollTrigger: {
-        trigger: "#about",
-        start: "0% 0%",
-        end: "100% 100%",
-        onLeaveBack: () => {
-          gsap.to("body", {backgroundColor: "#000"})
-          gsap.to(".about__title", {color: "#fff"})
-        },
-        onEnter: () => {
-          gsap.to("body", {backgroundColor: "#eeeae4"})
-          gsap.to(".about__title", {color: "#222"})
-        }
-      }
-    })
-
     const aboutDesc = document.querySelector(".about__desc")
     gsap.to(".about__wrap", {
       scrollTrigger: {
@@ -101,16 +117,18 @@ const About = () => {
               <div className="item1__img-box item1__img-box--4">
                 <img src={aboutImg3} alt="" className="item1__img-box--img" />
               </div>
-              <p className="item__main-text">
-                <span className="item__main-text--point">성실</span>하고 <span className="item__main-text--point">책임감</span>이 있는것이 저의 가장 큰 장점입니다.<br />
-                주어진 일에 성실하게 최선을 다하고 맡은 일들을 끝까지 해냅니다.<br />
-                이러한 능력을 바탕으로 <span className="item__main-text--point">입사 8개월만에 선임 퍼블리셔</span> 자리를 맡아<br />
-                프로젝트를 진행한 경험이 있습니다.<br />
-              </p>
+              <div className="item__main-keyword">
+                <span className="item__main-num">
+                  <UseCountUp targetNumber={8} duration={2000} />
+                  <span className="item__main-num--sub">M</span>
+                </span>
+                <p className="item__main-keyword--text">
+                  성실함과 책임감으로 입사 8개월만에 선임 퍼블리셔 자리를 맡아<br />프로젝트를 진행한 경험이 있습니다.
+                </p>
+              </div>
               <p className="item__sub-text">
-                편도 1시간 30분이 넘는 대학교, 기공소,<br />
-                편도 2시간이 넘는 현재의 출퇴근 시간에도<br />
-                한번의 지각도 결근도 한 적이 없습니다.
+                왕복 3시간 거리 통학러<br />
+                왕복 4시간 성실한 출근러
               </p>
             </div>
             <div className="about__desc--item item item2">
@@ -126,11 +144,16 @@ const About = () => {
               <div className="item2__img-box item2__img-box--4">
                 <img src={aboutImg5} alt="" className="item2__img-box--img" />
               </div>
-              <p className="item__main-text">
-                <span className="item__main-text--point">웹 표준</span>과 <span className="item__main-text--point">웹 접근성</span>을 준수하는 웹사이트를 만듭니다.<br />
-                html, css를 조합하여 컨텐츠를 능숙하게 구현할 수 있으며,<br />
-                다른 사람이 짜놓은 js를 이해하고 응용, 수정할 수 있습니다.
-              </p>
+              <div className="item__main-keyword">
+                <span className="item__main-num">
+                  <UseCountUp targetNumber={3} duration={2000} />
+                  <span className="item__main-num--sub">Project</span>
+                </span>
+                <p className="item__main-keyword--text">
+                  html과 css를 주로 사용하여 웹 표준과 웹 접근성을 준수하고<br />
+                  개발팀에서 짜놓은 js를 이해하고 응용, 수정하여 사용해 프로젝트를 제작했습니다. 
+                </p>
+              </div>
               <p className="item__sub-text">
                 현재는 더욱 성장하기 위해 react와<br />js를 꾸준히 공부하고 있습니다.
               </p>
