@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import aboutImg0 from "../assets/images/about00.svg";
 import aboutImg1 from "../assets/images/about01.svg";
 import aboutImg2 from "../assets/images/about02.svg";
@@ -9,41 +9,53 @@ import aboutImg6 from "../assets/images/about_js.svg"
 import aboutImg7 from "../assets/images/about_react.svg"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-
-const easeOutQuad = (t) => t * (2 - t);
-
-const UseCountUp = ({ targetNumber, duration }) => {
-  const [currentNumber, setCurrentNumber] = useState(0);
-
-  useEffect(() => {
-    let start = 0;
-    const end = parseInt(targetNumber, 10);
-    let startTime = null;
-
-    const animate = (timestamp) => {
-      if (!startTime) startTime = timestamp;
-      let progress = timestamp - startTime;
-      let percent = Math.min(progress / duration, 1);
-      percent = easeOutQuad(percent);
-
-      setCurrentNumber(Math.floor(percent * end));
-
-      if (progress < duration) {
-        requestAnimationFrame(animate);
-      } else {
-        setCurrentNumber(end);
-      }
-    };
-
-    requestAnimationFrame(animate);
-  }, [targetNumber, duration]);
-
-  return (
-    <span className="countNum">{currentNumber}</span>
-  )
-}
+import UseCountUp from "./numberCount";
 
 const About = () => {
+  const [startAnimation1, setStartAnimation1] = useState(false);
+  const [startAnimation2, setStartAnimation2] = useState(false);
+  const targetRef1 = useRef(null);
+  const targetRef2 = useRef(null);
+
+  useEffect(() => {
+    const observer1 = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStartAnimation1(true);
+          observer1.disconnect(); // 애니메이션이 시작되면 observer를 해제
+        }
+      },
+      { threshold: 0.3 } // div의 30%가 보이면 애니메이션 시작
+    );
+
+    const observer2 = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStartAnimation2(true);
+          observer2.disconnect(); // 애니메이션이 시작되면 observer를 해제
+        }
+      },
+      { threshold: 0.1 } // div의 30%가 보이면 애니메이션 시작
+    );
+
+    if (targetRef1.current) {
+      observer1.observe(targetRef1.current);
+    }
+
+    if (targetRef2.current) {
+      observer2.observe(targetRef2.current);
+    }
+
+    return () => {
+      if (targetRef1.current) {
+        observer1.unobserve(targetRef1.current);
+      }
+      if (targetRef2.current) {
+        observer2.unobserve(targetRef2.current);
+      }
+    };
+  }, []);
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const aboutDesc = document.querySelector(".about__desc")
@@ -104,7 +116,7 @@ const About = () => {
             About Me
           </h2>
           <div className="about__desc">
-            <div className="about__desc--item item item1">
+            <div className="about__desc--item item item1" ref={targetRef1}>
               <div className="item1__img-box item1__img-box--1">
                 <img src={aboutImg0} alt="" className="item1__img-box--img" />
               </div>
@@ -119,7 +131,7 @@ const About = () => {
               </div>
               <div className="item__main-keyword">
                 <span className="item__main-num">
-                  <UseCountUp targetNumber={8} duration={2000} />
+                  <UseCountUp targetNumber={8} duration={2000} start={startAnimation1} />
                   <span className="item__main-num--sub">M</span>
                 </span>
                 <p className="item__main-keyword--text">
@@ -131,7 +143,7 @@ const About = () => {
                 왕복 4시간 성실한 출근러
               </p>
             </div>
-            <div className="about__desc--item item item2">
+            <div className="about__desc--item item item2" ref={targetRef2}>
               <div className="item2__img-box item2__img-box--1">
                 <img src={aboutImg4} alt="" className="item2__img-box--img" />
               </div>
@@ -146,7 +158,7 @@ const About = () => {
               </div>
               <div className="item__main-keyword">
                 <span className="item__main-num">
-                  <UseCountUp targetNumber={3} duration={2000} />
+                  <UseCountUp targetNumber={3} duration={2000} start={startAnimation2} />
                   <span className="item__main-num--sub">Project</span>
                 </span>
                 <p className="item__main-keyword--text">
