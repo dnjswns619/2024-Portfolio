@@ -105,7 +105,7 @@ export const portContent = [
     imgSrc: "intro_circle0"
   },
   {
-    title: "Enterpriseblockchain",
+    title: "Enterprise blockchain",
     skil: ["html", "scss", "javascript", "gsap"],
     desc: `gsap 플러그인을 사용하여 사용사의 스크롤에 따라 변화하는 엔터프라이즈블록체인을 제작했습니다.
     observer API를 같이 사용해 사용자가 특정 섹션에 들어왔을때 header 메뉴가 변화하도록 제작하였으며,
