@@ -70,6 +70,24 @@ const About = () => {
         return -aboutDesc.offsetWidth
       }
     })
+    gsap.to(".desc__line--left", {
+      scrollTrigger: {
+        trigger: "#about",
+        start: "0% 0%",
+        end: "100% 100%",
+        scrub: 0
+      },
+      yPercent: 50
+    })
+    gsap.to(".desc__line--right", {
+      scrollTrigger: {
+        trigger: "#about",
+        start: "0% 0%",
+        end: "100% 100%",
+        scrub: 0
+      },
+      yPercent: -50
+    })
 
     const aboutDesc1Animation = gsap.timeline({
       scrollTrigger: {
@@ -141,6 +159,40 @@ const About = () => {
               <p className="item__sub-text">
                 왕복 3시간 거리 통학러<br />
                 왕복 4시간 성실한 출근러
+              </p>
+            </div>
+            <div className="about__desc--line">
+              <p className="desc__line desc__line--left">
+                HTML CSS JAVASCRIPT REACT
+                <em>JUN'S ABOUT ME</em>
+                HTML CSS JAVASCRIPT REACT
+                <em>JUN'S ABOUT ME</em>
+                HTML CSS JAVASCRIPT REACT
+                <em>JUN'S ABOUT ME</em>
+                HTML CSS JAVASCRIPT REACT
+                <em>JUN'S ABOUT ME</em>
+                HTML CSS JAVASCRIPT REACT
+                <em>JUN'S ABOUT ME</em>
+                HTML CSS JAVASCRIPT REACT
+                <em>JUN'S ABOUT ME</em>
+                HTML CSS JAVASCRIPT REACT
+                <em>JUN'S ABOUT ME</em>
+              </p>
+              <p className="desc__line desc__line--right">
+                JUN'S ABOUT ME
+                <em>HTML CSS JAVASCRIPT REACT</em>
+                JUN'S ABOUT ME
+                <em>HTML CSS JAVASCRIPT REACT</em>
+                JUN'S ABOUT ME
+                <em>HTML CSS JAVASCRIPT REACT</em>
+                JUN'S ABOUT ME
+                <em>HTML CSS JAVASCRIPT REACT</em>
+                JUN'S ABOUT ME
+                <em>HTML CSS JAVASCRIPT REACT</em>
+                JUN'S ABOUT ME
+                <em>HTML CSS JAVASCRIPT REACT</em>
+                JUN'S ABOUT ME
+                <em>HTML CSS JAVASCRIPT REACT</em>
               </p>
             </div>
             <div className="about__desc--item item item2" ref={targetRef2}>
