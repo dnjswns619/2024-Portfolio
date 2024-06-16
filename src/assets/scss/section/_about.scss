@@ -32,7 +32,7 @@
         font-size: 7vw;
         color: #e65100;
         &--sub {
-          font-size: 5vw;
+          font-size: 3vw;
         }
       }
       &__main-keyword {
@@ -92,7 +92,8 @@
     }
     .item2 {
       .item__sub-text {
-        left: 50rem;
+        &--1 { left: 50rem; }
+        &--2 { top: 45rem; left: 83rem; }
       }
       &__img-box {
         overflow: hidden;
@@ -105,8 +106,8 @@
           height: 17rem;
         }
         &--2 {
-          left: 70rem;
-          bottom: 13rem;
+          left: 60rem;
+          bottom: 3rem;
           width: 10rem;
           height: 10rem;
         }

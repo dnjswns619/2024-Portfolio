@@ -150,7 +150,7 @@ const About = () => {
               <div className="item__main-keyword">
                 <span className="item__main-num">
                   <UseCountUp targetNumber={8} duration={2000} start={startAnimation1} />
-                  <span className="item__main-num--sub">M</span>
+                  <span className="item__main-num--sub">Month+</span>
                 </span>
                 <p className="item__main-keyword--text">
                   성실함과 책임감으로 입사 8개월만에 선임 퍼블리셔 자리를 맡아<br />프로젝트를 진행한 경험이 있습니다.
@@ -210,7 +210,7 @@ const About = () => {
               </div>
               <div className="item__main-keyword">
                 <span className="item__main-num">
-                  <UseCountUp targetNumber={3} duration={2000} start={startAnimation2} />
+                  <UseCountUp targetNumber={12} duration={2000} start={startAnimation2} />
                   <span className="item__main-num--sub">Project</span>
                 </span>
                 <p className="item__main-keyword--text">
@@ -218,8 +218,13 @@ const About = () => {
                   개발팀에서 짜놓은 js를 이해하고 응용, 수정하여 사용해 프로젝트를 제작했습니다. 
                 </p>
               </div>
-              <p className="item__sub-text">
+              <p className="item__sub-text item__sub-text--1">
                 현재는 더욱 성장하기 위해 react와<br />js를 꾸준히 공부하고 있습니다.
+              </p>
+              <p className="item__sub-text item__sub-text--2">
+                프로젝트: 12개<br />
+                회사에서 진행한 프로젝트: 3<br />
+                개인으로 진행한 프로젝트: 9
               </p>
             </div>
           </div>
