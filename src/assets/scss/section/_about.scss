@@ -129,5 +129,26 @@
         }
       }
     }
+    &--line {
+      overflow: hidden;
+      height: 100%;
+      padding-right: 20vw;
+      writing-mode: vertical-rl;
+      .desc__line {
+        display: flex;
+        justify-content: center;
+        width: 30px;
+        white-space: noWrap;
+        font-size: 1.2vw;
+        em {
+          display: inline-block;
+          margin: 5px 0;
+          color: #e65100;
+        }
+        &--right {
+          transform: rotateY(-180deg);
+        }
+      }
+    }
   }
 }
