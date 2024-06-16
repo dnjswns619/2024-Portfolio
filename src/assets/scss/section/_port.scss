@@ -8,15 +8,103 @@
     @include flex-center;
     height: 100vh;
     font-family: var(--font-iropke);
-    font-size: 10vw;
+    font-size: 14vw;
   }
   &__item {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10vw;
+    gap: 7vw;
+    &:nth-child(1 of .port__item) {
+      .imgBox__front {
+        h2 {
+          --after-width1: 100%;
+          &::after {
+            width: var(--after-width1);
+          }
+        }
+      }
+      .item {
+        --textColor-progress1: 0%;
+        &__title {
+          background: linear-gradient(90deg, #1b6856 var(--textColor-progress1), transparent 0%);
+          background-size: cover;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    &:nth-child(2 of .port__item) {
+      .imgBox__front {
+        background-color: rgb(67, 144, 100);
+        h2 {
+          --after-width2: 100%;
+          &::after {
+            left: 0;
+            width: var(--after-width2);
+            background-color: rgb(67, 144, 100);
+          }
+        }
+      }
+      .item {
+        --textColor-progress2: 0%;
+        &__title {
+          background: linear-gradient(270deg, #1b6856 var(--textColor-progress2), transparent 0%);
+          background-size: cover;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    &:nth-child(3 of .port__item) {
+      .imgBox__front {
+        background-color: rgb(85, 158, 97);
+        h2 {
+          --after-width3: 100%;
+          &::after {
+            width: var(--after-width3);
+            background-color: rgb(85, 158, 97);
+          }
+        }
+      }
+      .item {
+        --textColor-progress3: 0%;
+        &__title {
+          background: linear-gradient(90deg, #1b6856 var(--textColor-progress3), transparent 0%);
+          background-size: cover;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    &:nth-child(4 of .port__item) {
+      .imgBox__front {
+        background-color: rgb(137, 204, 140);
+        h2 {
+          --after-width4: 100%;
+          &::after {
+            left: 0;
+            width: var(--after-width4);
+            background-color: rgb(137, 204, 140);
+          }
+        }
+      }
+      .item {
+        --textColor-progress4: 0%;
+        &__title {
+          background: linear-gradient(270deg, #1b6856 var(--textColor-progress4), transparent 0%);
+          background-size: cover;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
     &--desc {
-      flex: 0 0 30%;
+      flex: 0 0 33%;
       text-align: center;
     }
     .item {
@@ -25,21 +113,30 @@
       align-items: center;
       gap: 2rem;
       &__title {
+        position: relative;
         width: 100%;
         font-family: var(--font-caorgen);
         font-size: 4vw;
-        color: var(--color-point);
-        border-bottom: 1px solid var(--color-point);
+        
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 5px;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: var(--color-point);
+        }
       }
       &__skill {
         display: flex;
         width: 100%;
         &--tit {
-          width:30%;
+          width:20%;
           text-align: center;
         }
         &--text {
-          width: 70%;
+          width: 80%;
           text-align: left;
           text-transform: capitalize;
         }
@@ -48,11 +145,11 @@
         display: flex;
         width: 100%;
         &--tit {
-          width:30%;
+          width:20%;
           text-align: center;
         }
         &--text {
-          width: 70%;
+          width: 80%;
           text-align: left;
           text-transform: capitalize;
         }
@@ -61,11 +158,11 @@
         display: flex;
         width: 100%;
         &--tit {
-          width:30%;
+          width:20%;
           text-align: center;
         }
         &--text {
-          width: 70%;
+          width: 80%;
           text-align: left;
           text-transform: capitalize;
         }
@@ -102,10 +199,11 @@
         width: 100%;
         height: 100%;
         padding: 5px;
-        background: url(../../images/card.png) center / cover no-repeat;
+        background-color: rgb(27, 104, 86);
         border-radius: 16px;
         h2 {
           @include flexCol-center;
+          position: relative;
           width: 100%;
           height: 100%;
           border: 2px solid var(--mainBg-color);
@@ -115,6 +213,15 @@
           color: var(--mainBg-color);
           span {
             font-size: 2vw;
+          }
+          &::after{
+            content: "";
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            position: absolute;
+            height: 60px;
+            background-color: rgb(27, 104, 86);
           }
         }
       }

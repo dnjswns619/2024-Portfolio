@@ -1,7 +1,42 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { portContent } from "../constants";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+
+const AnimatedText = ({ text }) => {
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    const chars = textRef.current.querySelectorAll('span');
+    const portTitleAnimation = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#port",
+        start: "0% 40%",
+        end: "0% 0%",
+        scrub: 0
+      }
+    })
+    portTitleAnimation
+    .to(chars[0], { yPercent: -20 }, "a")
+    .to(chars[1], { yPercent: -35 }, "a+=0.2")
+    .to(chars[2], { yPercent: -20 }, "a+=0.4")
+    .to(chars[4], { yPercent: -30 }, "a")
+    .to(chars[6], { yPercent: -20 }, "a+=0.4")
+    .to(chars[7], { yPercent: -35 }, "a+=0.2")
+    .to(chars[8], { yPercent: -25 }, "a")
+  }, []);
+
+  return (
+    <h2 className="port__title" ref={textRef}>
+      {splitText(text)}
+    </h2>
+  );
+};
+const splitText = (text) => {
+  return text.split("").map((char, idx) => (
+    <span key={idx} style={{display: 'inline-block'}}>{char}</span>
+  ))
+}
 
 const Port = () => {
   useEffect(() => {
@@ -12,11 +47,9 @@ const Port = () => {
         trigger: "#port",
         start: "45% 100%",
         end: "100% 100%",
-        scrub: 0,
-        markers: true
+        scrub: 0
       }
     })
-
     const portCards = document.querySelectorAll(".port__item--img");
     const portItem = document.querySelectorAll(".port__item");
     portCards.forEach((card, idx) => {
@@ -27,16 +60,63 @@ const Port = () => {
         portItem[idx].classList.remove("on");
       })
     })
-    
     gsap.utils.toArray(".port__item").forEach((item) => {
-      portItemAnimation.to(item, {gap: () => 15 + "vw", yPercent: -10})
+      portItemAnimation.to(item, {gap: () => 10 + "vw", yPercent: -10})
     })
+
+    const portText1Animation = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".port__item:nth-child(1 of .port__item)",
+        start: "0% 65%",
+        end: "0% 30%"
+      },
+      ease: "none"
+    })
+    portText1Animation
+    .to(".imgBox__front h2", {"--after-width1": () => 0 + "%", duration: 1}, "b")
+    .to(".item", {"--textColor-progress1": () => 100 + "%", duration: 1}, "b")
+
+    const portText2Animation = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".port__item:nth-child(2 of .port__item)",
+        start: "0% 65%",
+        end: "0% 30%"
+      },
+      ease: "none"
+    })
+    portText2Animation
+    .to(".imgBox__front h2", {"--after-width2": () => 0 + "%", duration: 1}, "b")
+    .to(".item", {"--textColor-progress2": () => 100 + "%", duration: 1}, "b")
+
+    const portText3Animation = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".port__item:nth-child(3 of .port__item)",
+        start: "0% 65%",
+        end: "0% 30%"
+      },
+      ease: "none"
+    })
+    portText3Animation
+    .to(".imgBox__front h2", {"--after-width3": () => 0 + "%", duration: 1}, "b")
+    .to(".item", {"--textColor-progress3": () => 100 + "%", duration: 1}, "b")
+
+    const portText4Animation = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".port__item:nth-child(4 of .port__item)",
+        start: "0% 65%",
+        end: "0% 30%"
+      },
+      ease: "none"
+    })
+    portText4Animation
+    .to(".imgBox__front h2", {"--after-width4": () => 0 + "%", duration: 1}, "b")
+    .to(".item", {"--textColor-progress4": () => 100 + "%", duration: 1}, "b")
   })
 
   return (
     <section id="port" className="port">
       <div className="port__wrap">
-        <h2 className="port__title">Portfolio</h2>
+        <AnimatedText text="PORTFOLIO" />
         {
           portContent.map((port, idx) => {
             return(
