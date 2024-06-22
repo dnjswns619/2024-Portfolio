@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import ProjectDesc from "./ProjectDesc";
 import { portContent } from "../constants";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -133,39 +134,10 @@ const Port = () => {
                     <img src={require('../assets/images/' + port.imgSrc + '.jpg')} alt="" />
                   </div>
                 </div>
-                <div className="port__item--desc item">
-                  <div className="item__title">{port.title}</div>
-                  <div className="item__skill">
-                    <div className="item__skill--tit">Language :</div>
-                    <div className="item__skill--text">{port.skil.join(", ")}</div>
-                  </div>
-                  <div className="item__desc">
-                    <div className="item__desc--tit">Description :</div>
-                    <p className="item__desc--text" dangerouslySetInnerHTML={{__html: port.desc}}></p>
-                  </div>
-                  <div className="item__git-link">
-                    <div className="item__git-link--tit">GitHub: </div>
-                    <a href={port.gitLink} className="item__gitLink">{port.gitLink}</a>
-                  </div>
-                  
-                </div>
+                <ProjectDesc className="port__item--desc" port={port} />
               </div> :
               <div className="port__item">
-                <div className="port__item--desc item">
-                  <div className="item__title">{port.title}</div>
-                  <div className="item__skill">
-                    <div className="item__skill--tit">Language :</div>
-                    <div className="item__skill--text">{port.skil.join(", ")}</div>
-                  </div>
-                  <div className="item__desc">
-                    <div className="item__desc--tit">Description :</div>
-                    <p className="item__desc--text" dangerouslySetInnerHTML={{__html: port.desc}}></p>
-                  </div>
-                  <div className="item__git-link">
-                    <div className="item__git-link--tit">GitHub: </div>
-                    <a href={port.gitLink} className="item__gitLink">{port.gitLink}</a>
-                  </div>
-                </div>
+                <ProjectDesc className="port__item--desc" port={port} />
                 <div className="port__item--img imgBox imgBox__right">
                   <div className="imgBox__item imgBox__front">
                     {
