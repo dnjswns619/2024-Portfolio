@@ -75,7 +75,7 @@ const Port = () => {
     })
     portText1Animation
     .to(".imgBox__front h2", {"--after-width1": () => 0 + "%", duration: 1}, "b")
-    .to(".item", {"--textColor-progress1": () => 100 + "%", duration: 1}, "b")
+    .to(".projectDesc", {"--textColor-progress1": () => 100 + "%", duration: 1}, "b")
 
     const portText2Animation = gsap.timeline({
       scrollTrigger: {
@@ -87,7 +87,7 @@ const Port = () => {
     })
     portText2Animation
     .to(".imgBox__front h2", {"--after-width2": () => 0 + "%", duration: 1}, "b")
-    .to(".item", {"--textColor-progress2": () => 100 + "%", duration: 1}, "b")
+    .to(".projectDesc", {"--textColor-progress2": () => 100 + "%", duration: 1}, "b")
 
     const portText3Animation = gsap.timeline({
       scrollTrigger: {
@@ -99,7 +99,7 @@ const Port = () => {
     })
     portText3Animation
     .to(".imgBox__front h2", {"--after-width3": () => 0 + "%", duration: 1}, "b")
-    .to(".item", {"--textColor-progress3": () => 100 + "%", duration: 1}, "b")
+    .to(".projectDesc", {"--textColor-progress3": () => 100 + "%", duration: 1}, "b")
 
     const portText4Animation = gsap.timeline({
       scrollTrigger: {
@@ -111,7 +111,7 @@ const Port = () => {
     })
     portText4Animation
     .to(".imgBox__front h2", {"--after-width4": () => 0 + "%", duration: 1}, "b")
-    .to(".item", {"--textColor-progress4": () => 100 + "%", duration: 1}, "b")
+    .to(".projectDesc", {"--textColor-progress4": () => 100 + "%", duration: 1}, "b")
   })
 
   return (

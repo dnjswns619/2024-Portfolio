@@ -1,5 +1,4 @@
 const ProjectDesc = ({port}) => {
-  console.log(port);
   return (
     <div className="projectDesc">
       <div className="projectDesc__title">{port.title}</div>
