@@ -47,50 +47,49 @@ const Work = () => {
       scrollTrigger: {
         trigger: "#work",
         start: "20% 40%",
-        end: "45% 100%",
+        end: "50% 100%",
         scrub: 0,
         markers: true
       },
       ease: "none"
     })
-    const workHorizontalAnimation1 = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#work",
-        start: "45% 100%",
-        end: "50% 100%",
-        scrub: 0,
-      },
-      ease: "none"
+    const workImg1 = document.querySelectorAll(".work__img-box--section1 .workImg")
+    workImgAnimation1
+    .to(".work__img-box--section", { autoAlpha: 0, duration: 0.2 }, "a")
+    .to(".work__img-box--section1", { scale: 1, autoAlpha: 1 }, "a")
+    workImg1.forEach((img, idx) => {
+      workImgAnimation1
+      .set(workImg1[idx + 1], {autoAlpha: 1})
+      .set(img, {zIndex: 1})
+      .to(img, {rotateY: -180, zIndex: 1})
     })
-    const workImgBox = document.querySelector(".work__img-box");
-    gsap.utils.toArray(".work__img-box--section1 .workImg").forEach((img) => {
-      workImgAnimation1.to(img, {autoAlpha: 1})
-    })
-    workHorizontalAnimation1.to(".work__img-box", { x: () => (-workImgBox.offsetWidth) })
+    workImgAnimation1
+    .to(".work__img-box--section1", { scale: 0.333, autoAlpha: 1 })
+    .to(".work__img-box--section", { autoAlpha: 1 })
 
     const workImgAnimation2 = gsap.timeline({
       scrollTrigger: {
         trigger: "#work",
         start: "50% 100%",
-        end: "75% 100%",
+        end: "80% 100%",
         scrub: 0,
         markers: true
       },
       ease: "none"
     })
-    const workHorizontalAnimation2 = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#work",
-        start: "75% 100%",
-        end: "80% 100%",
-        scrub: 0,
-      },
-      ease: "none"
+    const workImg2 = document.querySelectorAll(".work__img-box--section2 .workImg")
+    workImgAnimation2
+    .to(".work__img-box--section", { autoAlpha: 0, duration: 0.4 }, "b")
+    .to(".work__img-box--section2", { left: 0, scale: 1, autoAlpha: 1 }, "b")
+    workImg2.forEach((img, idx) => {
+      workImgAnimation2
+      .set(workImg2[idx + 1], {autoAlpha: 1})
+      .set(img, {zIndex: 1})
+      .to(img, {rotateY: -180, zIndex: 1})
     })
-    gsap.utils.toArray(".work__img-box--section2 .workImg").forEach((img) => {
-      workImgAnimation2.to(img, {autoAlpha: 1})
-    })
-    workHorizontalAnimation2.to(".work__img-box", { x: () => (-workImgBox.offsetWidth) * 2 })
+    workImgAnimation2
+    .to(".work__img-box--section2", { left: () => 33 + "%", scale: 0.333, autoAlpha: 1 })
+    .to(".work__img-box--section", { autoAlpha: 1 })
 
     const workImgAnimation3 = gsap.timeline({
       scrollTrigger: {
@@ -102,9 +101,19 @@ const Work = () => {
       },
       ease: "none"
     })
-    gsap.utils.toArray(".work__img-box--section3 .workImg").forEach((img) => {
-      workImgAnimation3.to(img, {autoAlpha: 1})
+    const workImg3 = document.querySelectorAll(".work__img-box--section3 .workImg")
+    workImgAnimation3
+    .to(".work__img-box--section", { autoAlpha: 0, duration: 0.4 }, "b")
+    .to(".work__img-box--section3", { left: 0, scale: 1, autoAlpha: 1 }, "b")
+    workImg3.forEach((img, idx) => {
+      workImgAnimation3
+      .set(workImg3[idx + 1], {autoAlpha: 1})
+      .set(img, {zIndex: 1})
+      .to(img, {rotateY: -180, zIndex: 1})
     })
+    workImgAnimation3
+    .to(".work__img-box--section3", { left: () => 66 + "%", scale: 0.333, autoAlpha: 1 })
+    .to(".work__img-box--section", { autoAlpha: 1 })
   })
 
   const workImgLength = 15;
@@ -113,7 +122,6 @@ const Work = () => {
     <section id="work" className="work">
       <div className="work__wrap">
         <div className="work__img-box">
-          <h2 className="work__title">WORK PORTFOLIO</h2>
           <div className="work__img-box--section work__img-box--section1">
             <h3 className="project__title">초등학교 3, 4학년 과학</h3>
             {renderWorkImg(workImgLength)}
