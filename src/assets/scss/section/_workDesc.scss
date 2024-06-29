@@ -1,0 +1,36 @@
+.workDesc {
+  background-color: var(--mainBg-color);
+  color: #000;
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 7vw;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7vw;
+    &--img {
+      overflow: hidden;
+      flex-shrink: 0;
+      position: relative;
+      width: 35vw;
+      height: 60vh;
+      padding: 4px;
+      border-radius: 20px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .projectDesc {
+      flex: 0 0 50%;
+      &__title {
+        font-family: var(--font-jua);
+        color: var(--color-point);
+      }
+    }
+  }
+}
