@@ -43,14 +43,6 @@ const Port = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const portItemAnimation = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#port",
-        start: "45% 100%",
-        end: "100% 100%",
-        scrub: 0
-      }
-    })
     const portCards = document.querySelectorAll(".port__item--img");
     const portItem = document.querySelectorAll(".port__item");
     portCards.forEach((card, idx) => {
@@ -61,9 +53,34 @@ const Port = () => {
         portItem[idx].classList.remove("on");
       })
     })
-    gsap.utils.toArray(".port__item").forEach((item) => {
-      portItemAnimation.to(item, {gap: () => 10 + "vw", yPercent: -10})
-    })
+    ScrollTrigger.matchMedia({
+      "(min-width: 1025px)": function() {
+        const portItemAnimation = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#port",
+            start: "45% 100%",
+            end: "100% 100%",
+            scrub: 0
+          }
+        })
+        gsap.utils.toArray(".port__item").forEach((item) => {
+          portItemAnimation.to(item, {gap: () => 10 + "vw", yPercent: -10})
+        })
+      },
+      "(max-width: 1024px)": function() {
+        const portItemAnimation = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#port",
+            start: "45% 100%",
+            end: "100% 100%",
+            scrub: 0
+          }
+        })
+        gsap.utils.toArray(".port__item").forEach((item) => {
+          portItemAnimation.to(item, {gap: () => 4 + "vw", yPercent: -10})
+        })
+      }
+    });
 
     const portText1Animation = gsap.timeline({
       scrollTrigger: {

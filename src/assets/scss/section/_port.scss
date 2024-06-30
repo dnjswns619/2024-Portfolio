@@ -177,5 +177,12 @@
       }
     }
   }
+}
 
+@media screen and (max-width: 1024px) {
+  .port {
+    &__item {
+      gap: 2vw;
+    }
+  }
 }
