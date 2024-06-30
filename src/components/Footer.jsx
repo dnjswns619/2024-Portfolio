@@ -1,8 +1,55 @@
-import React from "react";
-
+import React, {useEffect} from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 const Footer = () => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const footerScaleAnimation = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#footer",
+        start: "0% 0%",
+        end: "100% 100%",
+        scrub: 0,
+      }
+    })
+    footerScaleAnimation.to(".footer__effect", {"--circle": () => 0 + "%", duration: 0.6})
+    const textAnimation = [...document.querySelectorAll(".text")]
+    textAnimation.map((text) => footerScaleAnimation.to(text, { yPercent: -30, autoAlpha: 1, duration: 0.3}))
+    footerScaleAnimation
+    .to(".footer__career", {autoAlpha: 1, duration: 0.1}, "a")
+    .to(".footer__tel", {autoAlpha: 1, duration: 0.1}, "a")
+    .to(".footer__github", {autoAlpha: 1, duration: 0.1}, "a")
+    
+    return () => {
+      footerScaleAnimation.kill();
+    }
+  }, [])
+
+  const contentText = "Thank You"
+  const effectTextSplit = contentText.split("");
+
   return (
-    <div>Footer</div>
+    <footer id="footer" className="footer">
+      <div className="footer__wrap">
+        <div className="footer__effect">
+        </div>
+        <p className="footer__effect--text">
+          {
+            effectTextSplit.map((text) => {
+              return <span className="text">{text}</span>
+            })
+          }
+        </p>
+        <p className="footer__career footer__info">
+          <span className="footer__tit">Career :</span> <span>아이스캔디</span> 2023.03 ~</p>
+        <p className="footer__tel footer__info">
+          <span className="footer__tit">Tel :</span> 010-8329-0566</p>
+        <p className="footer__github footer__info">
+          <span className="footer__tit">GitHub :</span> <a href="https://github.com/dnjswns619">https://github.com/dnjswns619</a></p>
+
+      </div>
+    </footer>
   )
 }
 
