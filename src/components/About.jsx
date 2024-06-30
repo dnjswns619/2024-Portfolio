@@ -64,7 +64,8 @@ const About = () => {
         trigger: "#about",
         start: "0% 0%",
         end: "100% 100%",
-        scrub: 0
+        scrub: 0,
+        invalidateOnRefresh: true,
       },
       x: () => {
         return -aboutDesc.offsetWidth
@@ -222,9 +223,9 @@ const About = () => {
                 현재는 더욱 성장하기 위해 react와<br />js를 꾸준히 공부하고 있습니다.
               </p>
               <p className="item__sub-text item__sub-text--2">
-                프로젝트: 12개<br />
-                회사에서 진행한 프로젝트: 3<br />
-                개인으로 진행한 프로젝트: 9
+                총 진행 프로젝트: 12개<br />
+                회사 진행 프로젝트: 3개<br />
+                개인 진행 프로젝트: 9개
               </p>
             </div>
           </div>

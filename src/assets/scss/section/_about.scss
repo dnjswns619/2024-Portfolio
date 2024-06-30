@@ -45,8 +45,8 @@
       }
       &__sub-text {
         position: absolute;
-        top: 11rem;
-        left: 23rem;
+        top: 20vh;
+        left: 21vw;
         font-family: var(--font-jua);
         font-size: 1.2vw;
       }
@@ -59,29 +59,29 @@
         border-radius: 100%;
         &.bgNone { background-color: transparent; }
         &--1 {
-          top: 12rem;
-          left: -18rem;
-          width: 19rem;
-          height: 19rem;
+          top: 28vh;
+          left: -15vw;
+          width: 18vw;
+          height: 18vw;
         }
         &--2 {
-          left: 40rem;
-          bottom: 13rem;
-          width: 10rem;
-          height: 10rem;
+          left: 32vw;
+          bottom: 20vh;
+          width: 9vw;
+          height: 9vw;
           
         }
         &--3 {
-          top: 3rem;
-          left: 68rem;
-          width: 15rem;
-          height: 15rem;
+          top: 4vh;
+          left: 63vw;
+          width: 14vw;
+          height: 14vw;
         }
         &--4 {
-          left: 68rem;
-          bottom: 2rem;
-          width: 19rem;
-          height: 19rem;
+          left: 59vw;
+          bottom: 3vh;
+          width: 18vw;
+          height: 18vw;
         }
         &--img {
           width: 100%;
@@ -92,36 +92,36 @@
     }
     .item2 {
       .item__sub-text {
-        &--1 { left: 50rem; }
-        &--2 { top: 45rem; left: 83rem; }
+        &--1 { left: 47vw; }
+        &--2 { top: 45rem; left: 70vw; }
       }
       &__img-box {
         overflow: hidden;
         position: absolute;
         border-radius: 100%;
         &--1 {
-          top: 6rem;
-          left: 7rem;
-          width: 17rem;
-          height: 17rem;
+          top: 15vh;
+          left:5vw;
+          width: 16vw;
+          height: 16vw;
         }
         &--2 {
-          left: 60rem;
-          bottom: 3rem;
-          width: 10rem;
-          height: 10rem;
+          left: 57vw;
+          bottom: 9vh;
+          width: 9vw;
+          height: 9vw;
         }
         &--3 {
-          top: 11rem;
-          right: 12rem;
-          width: 13rem;
-          height: 13rem;
+          top: 20vh;
+          right: 11vw;
+          width: 12vw;
+          height: 12vw;
         }
         &--4 {
-          left: 12rem;
-          bottom: 2rem;
-          width: 19rem;
-          height: 19rem;
+          left: 10vw;
+          bottom: 8vh;
+          width: 18vw;
+          height: 18vw;
         }
         &--img {
           width: 100%;
@@ -140,7 +140,7 @@
         justify-content: center;
         width: 30px;
         white-space: noWrap;
-        font-size: 1.2vw;
+        font-size: 1.5rem;
         em {
           display: inline-block;
           margin: 5px 0;
@@ -148,6 +148,49 @@
         }
         &--right {
           transform: rotateY(-180deg);
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1300px) {
+  .about {
+    &__title { font-size: 14vw; }
+    &__desc {
+      .item {
+        &__main-num { 
+          font-size: 14vw;
+          &--sub {
+            font-size: 6vw;
+          }
+        }
+        &__main-keyword {
+          &--text { font-size: 2vw; }
+        }
+        &__sub-text {
+          font-size: 1.7vw;
+        }
+      }
+    }
+  }
+}
+// 테블릿 반응형
+@media screen and (min-width: 751px) and (max-width: 1024px) {
+  .about {
+    &__title { font-size: 16vw; }
+    &__desc {
+      .item {
+        &__main-num { 
+          font-size: 16vw;
+          &--sub {
+            font-size: 8vw;
+          }
+        }
+        &__main-keyword {
+          &--text { font-size: 2.5vw; }
+        }
+        &__sub-text {
+          font-size: 2.2vw;
         }
       }
     }
