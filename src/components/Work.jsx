@@ -26,6 +26,7 @@ const Work = () => {
         start: "0% 70%",
         end: "0% -20%",
         scrub: 0,
+        invalidateOnRefresh: true
       },
       ease: "none"
     })
@@ -39,6 +40,7 @@ const Work = () => {
         start: "10% 0%",
         end: "20% 0%",
         scrub: 0,
+        invalidateOnRefresh: true
       },
       autoAlpha: 1
     })
@@ -49,7 +51,7 @@ const Work = () => {
         start: "20% 40%",
         end: "50% 100%",
         scrub: 0,
-        markers: true
+        invalidateOnRefresh: true
       },
       ease: "none"
     })
@@ -59,12 +61,13 @@ const Work = () => {
     .to(".work__img-box--section1", { scale: 1, autoAlpha: 1 }, "a")
     workImg1.forEach((img, idx) => {
       workImgAnimation1
-      .set(workImg1[idx + 1], {autoAlpha: 1})
+      .set(img, { left: () => 50 + "vw" }, "b")
+      .set(workImg1[idx + 1], {autoAlpha: 1}, "b")
       .set(img, {zIndex: 1})
       .to(img, {rotateY: -180, zIndex: 1})
     })
     workImgAnimation1
-    .to(".work__img-box--section1", { scale: 0.333, autoAlpha: 1 })
+    .to(".work__img-box--section1", { scale: 0.533, autoAlpha: 1 })
     .to(".work__img-box--section", { autoAlpha: 1 })
 
     const workImgAnimation2 = gsap.timeline({
@@ -73,22 +76,23 @@ const Work = () => {
         start: "50% 100%",
         end: "80% 100%",
         scrub: 0,
-        markers: true
+        invalidateOnRefresh: true
       },
       ease: "none"
     })
     const workImg2 = document.querySelectorAll(".work__img-box--section2 .workImg")
     workImgAnimation2
-    .to(".work__img-box--section", { autoAlpha: 0, duration: 0.4 }, "b")
-    .to(".work__img-box--section2", { left: 0, scale: 1, autoAlpha: 1 }, "b")
+    .to(".work__img-box--section", { autoAlpha: 0, duration: 0.4 }, "c")
+    .to(".work__img-box--section2", { left: 0, scale: 1, autoAlpha: 1 }, "c")
     workImg2.forEach((img, idx) => {
       workImgAnimation2
-      .set(workImg2[idx + 1], {autoAlpha: 1})
+      .set(img, { left: () => 50 + "vw" }, "d")
+      .set(workImg2[idx + 1], {autoAlpha: 1}, "d")
       .set(img, {zIndex: 1})
       .to(img, {rotateY: -180, zIndex: 1})
     })
     workImgAnimation2
-    .to(".work__img-box--section2", { left: () => 33 + "%", scale: 0.333, autoAlpha: 1 })
+    .to(".work__img-box--section2", { left: () => 33 + "%", scale: 0.533, autoAlpha: 1 })
     .to(".work__img-box--section", { autoAlpha: 1 })
 
     const workImgAnimation3 = gsap.timeline({
@@ -97,22 +101,23 @@ const Work = () => {
         start: "80% 100%",
         end: "100% 100%",
         scrub: 0,
-        markers: true
+        invalidateOnRefresh: true
       },
       ease: "none"
     })
     const workImg3 = document.querySelectorAll(".work__img-box--section3 .workImg")
     workImgAnimation3
-    .to(".work__img-box--section", { autoAlpha: 0, duration: 0.4 }, "b")
-    .to(".work__img-box--section3", { left: 0, scale: 1, autoAlpha: 1 }, "b")
+    .to(".work__img-box--section", { autoAlpha: 0, duration: 0.4 }, "e")
+    .to(".work__img-box--section3", { left: 0, scale: 1, autoAlpha: 1 }, "e")
     workImg3.forEach((img, idx) => {
       workImgAnimation3
-      .set(workImg3[idx + 1], {autoAlpha: 1})
+      .set(img, { left: () => 50 + "vw" }, "f")
+      .set(workImg3[idx + 1], {autoAlpha: 1}, "f")
       .set(img, {zIndex: 1})
       .to(img, {rotateY: -180, zIndex: 1})
     })
     workImgAnimation3
-    .to(".work__img-box--section3", { left: () => 66 + "%", scale: 0.333, autoAlpha: 1 })
+    .to(".work__img-box--section3", { left: () => 66 + "%", scale: 0.533, autoAlpha: 1 })
     .to(".work__img-box--section", { autoAlpha: 1 })
   })
 
