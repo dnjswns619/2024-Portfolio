@@ -58,6 +58,7 @@ const About = () => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+    console.clear();
     const aboutDesc = document.querySelector(".about__desc")
     gsap.to(".about__wrap", {
       scrollTrigger: {
@@ -114,7 +115,6 @@ const About = () => {
         start: "50% 100%",
         end: "100% 100%",
         scrub: 0,
-        markers: true,
         onEnter: () => {
           gsap.fromTo(".item2 .item__main-text", { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: -20, duration: 1 })
           gsap.fromTo(".item2 .item__sub-text", { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: 0, duration: 1 })

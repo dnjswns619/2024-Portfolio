@@ -97,3 +97,39 @@
     }
   }
 }
+// 모바일 반응형
+@media screen and (max-width: 750px) {
+  .projectDesc {
+    flex: 0 0 50%;
+    &__title {
+      font-size: 8vw;
+    }
+    &__skill {
+      font-size: 14px;
+      &--tit {
+        width: 25%;
+      }
+      &--text {
+        width: 75%;
+      }
+    }
+    &__desc {
+      font-size: 14px;
+      &--tit {
+        width: 25%;
+      }
+      &--text {
+        width: 75%;
+      }
+    }
+    &__git-link {
+      font-size: 14px;
+      &--tit {
+        width: 25%;
+      }
+      &--text {
+        width: 75%;
+      }
+    }
+  }
+}
