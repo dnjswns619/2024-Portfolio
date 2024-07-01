@@ -73,3 +73,32 @@
     }
   }
 }
+// 모바일 반응형
+@media screen and (max-width: 750px) {
+  .workDesc {
+    &__wrap {
+      padding-top: 50vh;
+    }
+    .projectDesc {
+      &__title {
+        font-size: 5vw;
+      }
+    }
+    &__item {
+      flex-direction: column;
+      padding: 0 5vw;
+      &--img {
+        width: 40vw;
+        height: 60vw;
+        .codeImg__wrap{
+          &--1 {
+            top: 0;
+          }
+          &--2 {
+            top: 7vw;
+          }
+        }
+      }
+    }
+  }
+}

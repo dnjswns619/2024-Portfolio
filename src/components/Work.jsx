@@ -18,6 +18,134 @@ const renderWorkImg = (length) => {
 const Work = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+    console.clear();
+    const workImg1 = document.querySelectorAll(".work__img-box--section1 .workImg");
+    const workImg2 = document.querySelectorAll(".work__img-box--section2 .workImg");
+    const workImg3 = document.querySelectorAll(".work__img-box--section3 .workImg");
+    const workImgAnimation1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#work",
+        start: "20% 40%",
+        end: "50% 100%",
+        scrub: 0,
+        invalidateOnRefresh: true
+      },
+      ease: "none"
+    })
+    const workImgAnimation2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#work",
+        start: "50% 100%",
+        end: "80% 100%",
+        scrub: 0,
+        invalidateOnRefresh: true
+      },
+      ease: "none"
+    })
+    const workImgAnimation3 = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#work",
+        start: "80% 100%",
+        end: "100% 100%",
+        scrub: 0,
+        invalidateOnRefresh: true
+      },
+      ease: "none"
+    })
+    ScrollTrigger.matchMedia({
+      "(min-width: 751px)": function() {
+        // workProject 1
+        workImgAnimation1
+        .to(".work__img-box--section", { autoAlpha: 0, duration: 0.2 }, "a")
+        .fromTo(".work__img-box--section1", {top: () => 0 + "%", left: () => 0 + "%", scale: 0.533, autoAlpha: 1 }, {top: () => 0 + "%", left: () => 0 + "%", scale: 1, autoAlpha: 1 }, "a")
+        workImg1.forEach((img, idx) => {
+          workImgAnimation1
+          .fromTo(img, {left: () => 12 + "vw"}, { left: () => 50 + "vw", duration: 0.1 }, "b")
+          .fromTo(workImg1[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "b")
+          .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
+          .fromTo(img,{rotateY: 0}, {rotateY: -180})
+        })
+        workImgAnimation1
+        .to(".work__img-box--section1", {top: () => 0 + "%", left: () => 0 + "%", scale: 0.533, autoAlpha: 1 })
+        .to(".work__img-box--section", { autoAlpha: 1 })
+
+        // workProject 2
+        workImgAnimation2
+        .to(".work__img-box--section", { autoAlpha: 0, duration: 0.4 }, "c")
+        .fromTo(".work__img-box--section2", {top: () => 0 + "%", left: () => 33 + "%", scale: 0.533, autoAlpha: 1}, {top: () => 0 + "%", left: 0, scale: 1, autoAlpha: 1 }, "c")
+        workImg2.forEach((img, idx) => {
+          workImgAnimation2
+          .fromTo(img, {left: () => 12 + "vw"}, { left: () => 50 + "vw", duration: 0.1 }, "d")
+          .fromTo(workImg2[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "d")
+          .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
+          .fromTo(img,{rotateY: 0}, {rotateY: -180})
+        })
+        workImgAnimation2
+        .to(".work__img-box--section2", {top: () => 0 + "%", left: () => 33 + "%", scale: 0.533, autoAlpha: 1 })
+        .to(".work__img-box--section", { autoAlpha: 1 })
+
+        // workProject3
+        workImgAnimation3
+        .to(".work__img-box--section", { autoAlpha: 0, duration: 0.4 }, "e")
+        .fromTo(".work__img-box--section3",{top: () => 0 + "%", left: () => 66 + "%", scale: 0.533, autoAlpha: 1}, { left: 0, scale: 1, autoAlpha: 1 }, "e")
+        workImg3.forEach((img, idx) => {
+          workImgAnimation3
+          .fromTo(img, {left: () => 12 + "vw"}, { left: () => 50 + "vw", duration: 0.1 }, "f")
+          .fromTo(workImg3[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "f")
+          .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
+          .fromTo(img,{rotateY: 0}, {rotateY: -180})
+        })
+        workImgAnimation3
+        .to(".work__img-box--section3", {top: () => 0 + "%", left: () => 66 + "%", scale: 0.533, autoAlpha: 1 })
+        .to(".work__img-box--section", { autoAlpha: 1 })
+      },
+      "(max-width: 750px)": function() { //모바일 반응형
+        // workProject 1
+        workImgAnimation1
+        .to(".work__img-box--section", { autoAlpha: 0, duration: 0.2 }, "a")
+        .fromTo(".work__img-box--section1", {top: () => -6 + "%", left: () => 41 + "%", scale: 0.733, autoAlpha: 1 }, {top: () => 19 + "%", left: () => 41 + "%", scale: 1, autoAlpha: 1 }, "a")
+        workImg1.forEach((img, idx) => {
+          workImgAnimation1
+          .fromTo(img, {left: () => 0 + "vw"}, { left: () => 9 + "vw", duration: 0.1 }, "b")
+          .fromTo(workImg1[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "b")
+          .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
+          .fromTo(img,{rotateY: 0}, {rotateY: -180})
+        })
+        workImgAnimation1
+        .to(".work__img-box--section1", {top: () => -6 + "%", left: () => 33 + "%", scale: 0.733, autoAlpha: 1 })
+        .to(".work__img-box--section", { autoAlpha: 1 })
+
+        // workProject 2
+        workImgAnimation2
+        .to(".work__img-box--section", { autoAlpha: 0, duration: 0.4 }, "c")
+        .fromTo(".work__img-box--section2", {top: () => 27 + "%", left: () => 41 + "%", scale: 0.733, autoAlpha: 1}, {top: () => 19 + "%", left: () => 41 + "%", scale: 1, autoAlpha: 1 }, "c")
+        workImg2.forEach((img, idx) => {
+          workImgAnimation2
+          .fromTo(img, {left: () => 0 + "vw"}, { left: () => 9 + "vw", duration: 0.1 }, "d")
+          .fromTo(workImg2[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "d")
+          .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
+          .fromTo(img,{rotateY: 0}, {rotateY: -180})
+        })
+        workImgAnimation2
+        .to(".work__img-box--section2", {top: () => 27 + "%", left: () => 33 + "%", scale: 0.733, autoAlpha: 1 })
+        .to(".work__img-box--section", { autoAlpha: 1 })
+
+        // workProject3
+        workImgAnimation3
+        .to(".work__img-box--section", { autoAlpha: 0, duration: 0.4 }, "e")
+        .fromTo(".work__img-box--section3",{top: () => 60 + "%", left: () => 41 + "%", scale: 0.733, autoAlpha: 1}, {top: () => 19 + "%", left: () => 41 + "%", scale: 1, autoAlpha: 1 }, "e")
+        workImg3.forEach((img, idx) => {
+          workImgAnimation3
+          .fromTo(img, {left: () => 0 + "vw"}, { left: () => 9 + "vw", duration: 0.1 }, "f")
+          .fromTo(workImg3[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "f")
+          .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
+          .fromTo(img,{rotateY: 0}, {rotateY: -180})
+        })
+        workImgAnimation3
+        .to(".work__img-box--section3", {top: () => 60 + "%", left: () => 33 + "%", scale: 0.733, autoAlpha: 1 })
+        .to(".work__img-box--section", { autoAlpha: 1 })
+      }
+    });
 
     gsap.set(".work__wrap", {"--circle-scale": () => 5 + "%"})
     const workCircle1Animation = gsap.timeline({
@@ -44,81 +172,6 @@ const Work = () => {
       },
       autoAlpha: 1
     })
-
-    const workImgAnimation1 = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#work",
-        start: "20% 40%",
-        end: "50% 100%",
-        scrub: 0,
-        invalidateOnRefresh: true
-      },
-      ease: "none"
-    })
-    const workImg1 = document.querySelectorAll(".work__img-box--section1 .workImg")
-    workImgAnimation1
-    .to(".work__img-box--section", { autoAlpha: 0, duration: 0.2 }, "a")
-    .to(".work__img-box--section1", { scale: 1, autoAlpha: 1 }, "a")
-    workImg1.forEach((img, idx) => {
-      workImgAnimation1
-      .fromTo(img, {left: () => 12 + "vw"}, { left: () => 50 + "vw", duration: 0.1 }, "b")
-      .fromTo(workImg1[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "b")
-      .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
-      .fromTo(img,{rotateY: 0}, {rotateY: -180})
-    })
-    workImgAnimation1
-    .to(".work__img-box--section1", { scale: 0.533, autoAlpha: 1 })
-    .to(".work__img-box--section", { autoAlpha: 1 })
-
-    const workImgAnimation2 = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#work",
-        start: "50% 100%",
-        end: "80% 100%",
-        scrub: 0,
-        invalidateOnRefresh: true
-      },
-      ease: "none"
-    })
-    const workImg2 = document.querySelectorAll(".work__img-box--section2 .workImg")
-    workImgAnimation2
-    .to(".work__img-box--section", { autoAlpha: 0, duration: 0.4 }, "c")
-    .fromTo(".work__img-box--section2", {left: () => 33 + "%", scale: 0.533, autoAlpha: 1}, { left: 0, scale: 1, autoAlpha: 1 }, "c")
-    workImg2.forEach((img, idx) => {
-      workImgAnimation2
-      .fromTo(img, {left: () => 12 + "vw"}, { left: () => 50 + "vw", duration: 0.1 }, "d")
-      .fromTo(workImg2[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "d")
-      .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
-      .fromTo(img,{rotateY: 0}, {rotateY: -180})
-    })
-    workImgAnimation2
-    .to(".work__img-box--section2", { left: () => 33 + "%", scale: 0.533, autoAlpha: 1 })
-    .to(".work__img-box--section", { autoAlpha: 1 })
-
-    const workImgAnimation3 = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#work",
-        start: "80% 100%",
-        end: "100% 100%",
-        scrub: 0,
-        invalidateOnRefresh: true
-      },
-      ease: "none"
-    })
-    const workImg3 = document.querySelectorAll(".work__img-box--section3 .workImg")
-    workImgAnimation3
-    .to(".work__img-box--section", { autoAlpha: 0, duration: 0.4 }, "e")
-    .fromTo(".work__img-box--section3",{left: () => 66 + "%", scale: 0.533, autoAlpha: 1}, { left: 0, scale: 1, autoAlpha: 1 }, "e")
-    workImg3.forEach((img, idx) => {
-      workImgAnimation3
-      .fromTo(img, {left: () => 12 + "vw"}, { left: () => 50 + "vw", duration: 0.1 }, "f")
-      .fromTo(workImg3[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "f")
-      .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
-      .fromTo(img,{rotateY: 0}, {rotateY: -180})
-    })
-    workImgAnimation3
-    .to(".work__img-box--section3", { left: () => 66 + "%", scale: 0.533, autoAlpha: 1 })
-    .to(".work__img-box--section", { autoAlpha: 1 })
   })
 
   const workImgLength = 15;
