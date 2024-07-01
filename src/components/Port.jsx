@@ -14,7 +14,8 @@ const AnimatedText = ({ text }) => {
         trigger: "#port",
         start: "0% 40%",
         end: "0% 0%",
-        scrub: 0
+        scrub: 0,
+        invalidateOnRefresh: true
       }
     })
     portTitleAnimation
@@ -60,24 +61,40 @@ const Port = () => {
             trigger: "#port",
             start: "45% 100%",
             end: "100% 100%",
-            scrub: 0
+            scrub: 0,
+            invalidateOnRefresh: true
           }
         })
         gsap.utils.toArray(".port__item").forEach((item) => {
           portItemAnimation.to(item, {gap: () => 10 + "vw", yPercent: -10})
         })
       },
-      "(max-width: 1024px)": function() {
+      "(min-width: 901px) and (max-width: 1024px)": function() {
         const portItemAnimation = gsap.timeline({
           scrollTrigger: {
             trigger: "#port",
             start: "45% 100%",
             end: "100% 100%",
-            scrub: 0
+            scrub: 0,
+            invalidateOnRefresh: true
           }
         })
         gsap.utils.toArray(".port__item").forEach((item) => {
           portItemAnimation.to(item, {gap: () => 4 + "vw", yPercent: -10})
+        })
+      },
+      "(max-width: 900px)": function() {
+        const portItemAnimation = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#port",
+            start: "45% 100%",
+            end: "100% 100%",
+            scrub: 0,
+            invalidateOnRefresh: true
+          }
+        })
+        gsap.utils.toArray(".port__item").forEach((item) => {
+          portItemAnimation.to(item, {gap: () => 8 + "vw", yPercent: -10})
         })
       }
     });
@@ -86,7 +103,8 @@ const Port = () => {
       scrollTrigger: {
         trigger: ".port__item:nth-child(1 of .port__item)",
         start: "0% 65%",
-        end: "0% 30%"
+        end: "0% 30%",
+        invalidateOnRefresh: true
       },
       ease: "none"
     })
@@ -98,7 +116,8 @@ const Port = () => {
       scrollTrigger: {
         trigger: ".port__item:nth-child(2 of .port__item)",
         start: "0% 65%",
-        end: "0% 30%"
+        end: "0% 30%",
+        invalidateOnRefresh: true
       },
       ease: "none"
     })
@@ -110,7 +129,8 @@ const Port = () => {
       scrollTrigger: {
         trigger: ".port__item:nth-child(3 of .port__item)",
         start: "0% 65%",
-        end: "0% 30%"
+        end: "0% 30%",
+        invalidateOnRefresh: true
       },
       ease: "none"
     })
@@ -122,7 +142,8 @@ const Port = () => {
       scrollTrigger: {
         trigger: ".port__item:nth-child(4 of .port__item)",
         start: "0% 65%",
-        end: "0% 30%"
+        end: "0% 30%",
+        invalidateOnRefresh: true
       },
       ease: "none"
     })
@@ -139,7 +160,7 @@ const Port = () => {
           portContent.map((port, idx) => {
             return(
               idx % 2 === 0 ? 
-              <div className="port__item">
+              <div className={`port__item port__item--${idx + 1}`}>
                 <div className="port__item--img imgBox imgBox__left">
                   <div className="imgBox__item imgBox__front">
                     {
@@ -153,7 +174,7 @@ const Port = () => {
                 </div>
                 <ProjectDesc className="port__item--desc" data={port} />
               </div> :
-              <div className="port__item">
+              <div className={`port__item port__item--${idx + 1}`}>
                 <ProjectDesc className="port__item--desc" data={port} />
                 <div className="port__item--img imgBox imgBox__right">
                   <div className="imgBox__item imgBox__front">

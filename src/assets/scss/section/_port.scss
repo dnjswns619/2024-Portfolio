@@ -1,7 +1,9 @@
 .port {
+  overflow: hidden;
   &__wrap {
     @include flexCol-center;
     gap: 7vw;
+    padding: 5vw 0;
     width: 100%;
   }
   &__title {
@@ -178,11 +180,33 @@
     }
   }
 }
-
+// 태블릿 반응형
 @media screen and (max-width: 1024px) {
   .port {
     &__item {
       gap: 2vw;
+    }
+  }
+}
+// 모바일 반응형
+@media screen and (max-width: 900px) {
+  .port {
+    &__item {
+      flex-direction: column;
+      gap: 4vw;
+      padding: 0 5vw;
+      &:not(:last-child) { margin-bottom: 5vw; }
+      &--img {
+        width: 75vw;
+        height: 45vw;
+      }
+      &--2 { flex-direction: column-reverse; }
+      &--4 { flex-direction: column-reverse; }
+      .imgBox {
+        &__front {
+          h2 { font-size: 8vw; }
+        }
+      }
     }
   }
 }
