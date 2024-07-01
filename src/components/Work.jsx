@@ -61,7 +61,7 @@ const Work = () => {
     .to(".work__img-box--section1", { scale: 1, autoAlpha: 1 }, "a")
     workImg1.forEach((img, idx) => {
       workImgAnimation1
-      .to(img, { left: () => 50 + "vw", duration: 0.1 }, "b")
+      .fromTo(img, {left: () => 12 + "vw"}, { left: () => 50 + "vw", duration: 0.1 }, "b")
       .fromTo(workImg1[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "b")
       .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
       .fromTo(img,{rotateY: 0}, {rotateY: -180})
@@ -83,11 +83,11 @@ const Work = () => {
     const workImg2 = document.querySelectorAll(".work__img-box--section2 .workImg")
     workImgAnimation2
     .to(".work__img-box--section", { autoAlpha: 0, duration: 0.4 }, "c")
-    .to(".work__img-box--section2", { left: 0, scale: 1, autoAlpha: 1 }, "c")
+    .fromTo(".work__img-box--section2", {left: () => 33 + "%", scale: 0.533, autoAlpha: 1}, { left: 0, scale: 1, autoAlpha: 1 }, "c")
     workImg2.forEach((img, idx) => {
       workImgAnimation2
-      .to(img, { left: () => 50 + "vw", duration: 0.1 }, "b")
-      .fromTo(workImg1[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "b")
+      .fromTo(img, {left: () => 12 + "vw"}, { left: () => 50 + "vw", duration: 0.1 }, "d")
+      .fromTo(workImg2[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "d")
       .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
       .fromTo(img,{rotateY: 0}, {rotateY: -180})
     })
@@ -108,11 +108,11 @@ const Work = () => {
     const workImg3 = document.querySelectorAll(".work__img-box--section3 .workImg")
     workImgAnimation3
     .to(".work__img-box--section", { autoAlpha: 0, duration: 0.4 }, "e")
-    .to(".work__img-box--section3", { left: 0, scale: 1, autoAlpha: 1 }, "e")
+    .fromTo(".work__img-box--section3",{left: () => 66 + "%", scale: 0.533, autoAlpha: 1}, { left: 0, scale: 1, autoAlpha: 1 }, "e")
     workImg3.forEach((img, idx) => {
       workImgAnimation3
-      .to(img, { left: () => 50 + "vw", duration: 0.1 }, "b")
-      .fromTo(workImg1[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "b")
+      .fromTo(img, {left: () => 12 + "vw"}, { left: () => 50 + "vw", duration: 0.1 }, "f")
+      .fromTo(workImg3[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "f")
       .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
       .fromTo(img,{rotateY: 0}, {rotateY: -180})
     })
