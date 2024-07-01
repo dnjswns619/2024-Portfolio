@@ -61,10 +61,10 @@ const Work = () => {
     .to(".work__img-box--section1", { scale: 1, autoAlpha: 1 }, "a")
     workImg1.forEach((img, idx) => {
       workImgAnimation1
-      .set(img, { left: () => 50 + "vw" }, "b")
-      .set(workImg1[idx + 1], {autoAlpha: 1}, "b")
-      .set(img, {zIndex: 1})
-      .to(img, {rotateY: -180, zIndex: 1})
+      .to(img, { left: () => 50 + "vw", duration: 0.1 }, "b")
+      .fromTo(workImg1[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "b")
+      .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
+      .fromTo(img,{rotateY: 0}, {rotateY: -180})
     })
     workImgAnimation1
     .to(".work__img-box--section1", { scale: 0.533, autoAlpha: 1 })
@@ -86,10 +86,10 @@ const Work = () => {
     .to(".work__img-box--section2", { left: 0, scale: 1, autoAlpha: 1 }, "c")
     workImg2.forEach((img, idx) => {
       workImgAnimation2
-      .set(img, { left: () => 50 + "vw" }, "d")
-      .set(workImg2[idx + 1], {autoAlpha: 1}, "d")
-      .set(img, {zIndex: 1})
-      .to(img, {rotateY: -180, zIndex: 1})
+      .to(img, { left: () => 50 + "vw", duration: 0.1 }, "b")
+      .fromTo(workImg1[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "b")
+      .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
+      .fromTo(img,{rotateY: 0}, {rotateY: -180})
     })
     workImgAnimation2
     .to(".work__img-box--section2", { left: () => 33 + "%", scale: 0.533, autoAlpha: 1 })
@@ -111,10 +111,10 @@ const Work = () => {
     .to(".work__img-box--section3", { left: 0, scale: 1, autoAlpha: 1 }, "e")
     workImg3.forEach((img, idx) => {
       workImgAnimation3
-      .set(img, { left: () => 50 + "vw" }, "f")
-      .set(workImg3[idx + 1], {autoAlpha: 1}, "f")
-      .set(img, {zIndex: 1})
-      .to(img, {rotateY: -180, zIndex: 1})
+      .to(img, { left: () => 50 + "vw", duration: 0.1 }, "b")
+      .fromTo(workImg1[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "b")
+      .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
+      .fromTo(img,{rotateY: 0}, {rotateY: -180})
     })
     workImgAnimation3
     .to(".work__img-box--section3", { left: () => 66 + "%", scale: 0.533, autoAlpha: 1 })
