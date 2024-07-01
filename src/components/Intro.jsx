@@ -14,13 +14,16 @@ const Intro = () => {
     gsap.timeline({
       scrollTrigger: {
         trigger: "#intro",
-        start: "65% 100%",
-        end: "70% 100%",
+        start: "75% 100%",
+        end: "78% 100%",
+        invalidateOnRefresh: true,
         onLeaveBack: () => {
-          gsap.set(".desc__item--middle .desc__item--img:nth-child(3 of .desc__item--img)", {autoAlpha: 0})
+          gsap.set(".desc__item--middle .desc__item--img:nth-child(3 of .desc__item--img)", {autoAlpha: 0}, "c")
+          gsap.set(".intro__tit", {autoAlpha: 1}, "c")
         },
         onEnter: () => {
-          gsap.to(".desc__item--middle .desc__item--img:nth-child(3 of .desc__item--img)", {autoAlpha: 1})
+          gsap.to(".desc__item--middle .desc__item--img:nth-child(3 of .desc__item--img)", {autoAlpha: 1}, "d")
+          gsap.to(".intro__tit", {autoAlpha: 0}, "d")
         }
       }
     })
@@ -31,6 +34,7 @@ const Intro = () => {
         start: "0% 0%",
         end: "100% 0%",
         scrub: 0,
+        invalidateOnRefresh: true
       }
     })
     

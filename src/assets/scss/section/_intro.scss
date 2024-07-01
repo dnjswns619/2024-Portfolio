@@ -12,23 +12,23 @@
   }
   &__tit {
     --circle: 100%;
-    @include position-center;
+    z-index: 1;
     @include flexCol-center;
+    @include position-center;
     width: 100%;
     height: 100%;
-    mix-blend-mode: hard-light;
     background-color: var(--mainBg-color);
     clip-path: circle(var(--circle) at 50% 50%);
     &--text {
       position: relative;
       font-family: var(--font-eng);
-      font-size: 14rem;
+      font-size: 15vw;
       line-height: 1;
       color: #222;
       span {
         display: block;
         font-family: var(--font-now);
-        font-size: 7rem;
+        font-size: 7vw;
         color: var(--color-point)
       }
     }
@@ -44,8 +44,8 @@
     transform: translate(-50%, -50%) scale(var(--scale));
     width: 100%;
     height: 100%;
-    font-size: 40px;
     .desc__item {
+      z-index: -1;
       display: flex;
       align-items: center;
       gap: 2vw;
@@ -55,9 +55,9 @@
       &--top {
         align-self: flex-start;
         position: relative;
-        font-size: 5rem;
-        &--text {
-          font-size: 4rem;
+        font-size: 4vw;
+        .desc__item--text.kor {
+          font-size: 3vw;
         }
       }
       &--middle {
@@ -65,9 +65,9 @@
         left: 7px;
         justify-content: center;
         position: relative;
-        font-size: 3rem;
-        &--text {
-          font-size: 2rem;
+        font-size: 2.5vw;
+        .desc__item--text.kor {
+          font-size: 2vw;
         }
       }
       &--bottom {
@@ -75,12 +75,12 @@
         left: 7px;
         justify-content: center;
         position: relative;
-        font-size: 4rem;
-        &--text {
-          font-size: 3rem;
+        font-size: 3vw;
+        .desc__item--text.kor {
+          font-size: 2.5vw;
         }
       }
-      &--img {width: 3rem; height: 3rem; border-radius: 50%; }
+      &--img {width: 2.5vw; height: 2.5vw; border-radius: 50%; }
     }
   }
 }

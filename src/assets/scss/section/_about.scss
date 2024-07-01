@@ -196,3 +196,25 @@
     }
   }
 }
+// 모바일 반응형
+@media screen and (max-width: 750px) {
+  .about {
+    &__title { font-size: 16vw; }
+    &__desc {
+      .item {
+        &__main-num { 
+          font-size: 18vw;
+          &--sub {
+            font-size: 10vw;
+          }
+        }
+        &__main-keyword {
+          &--text { font-size: 2.8vw; }
+        }
+        &__sub-text {
+          font-size: 2.6vw;
+        }
+      }
+    }
+  }
+}
