@@ -9,7 +9,7 @@ const renderWorkImg = (length) => {
   for (let i = 0; i <= length - 1; i++) {
     randomWorkImg = Math.floor(workImg.length * Math.random());
     imgArr.push(
-      <img className="workImg" src={require('../assets/images/work/' + workImg[randomWorkImg].imgSrc + '.jpg')} />
+      <img className="workImg" src={require('../assets/images/work/' + workImg[randomWorkImg].imgSrc + '.jpg')} key={i} />
     )
   }
   return imgArr;
@@ -18,7 +18,6 @@ const renderWorkImg = (length) => {
 const Work = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    console.clear();
     const workImg1 = document.querySelectorAll(".work__img-box--section1 .workImg");
     const workImg2 = document.querySelectorAll(".work__img-box--section2 .workImg");
     const workImg3 = document.querySelectorAll(".work__img-box--section3 .workImg");

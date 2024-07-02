@@ -160,7 +160,7 @@ const Port = () => {
           portContent.map((port, idx) => {
             return(
               idx % 2 === 0 ? 
-              <div className={`port__item port__item--${idx + 1}`}>
+              <div className={`port__item port__item--${idx + 1}`} key={port.id}>
                 <div className="port__item--img imgBox imgBox__left">
                   <div className="imgBox__item imgBox__front">
                     {
@@ -174,7 +174,7 @@ const Port = () => {
                 </div>
                 <ProjectDesc className="port__item--desc" data={port} />
               </div> :
-              <div className={`port__item port__item--${idx + 1}`}>
+              <div className={`port__item port__item--${idx + 1}`} key={port.id}>
                 <ProjectDesc className="port__item--desc" data={port} />
                 <div className="port__item--img imgBox imgBox__right">
                   <div className="imgBox__item imgBox__front">

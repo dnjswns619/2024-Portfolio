@@ -51,7 +51,7 @@ const WorkDesc = () => {
         {
           workContent.map((item, idx) => {
             return (
-              <div className={`workDesc__item workDesc__item${idx + 1}`}>
+              <div className={`workDesc__item workDesc__item${idx + 1}`} key={item.id}>
                 <div className="workDesc__item--img">
                   <div className="codeImg__wrap codeImg__wrap--1">
                     <img className="codeImg codeImg1" src={require('../assets/images/' + item.imgSrc1 + '.png')} alt="" />

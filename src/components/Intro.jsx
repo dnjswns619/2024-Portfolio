@@ -8,9 +8,7 @@ import { introText } from "../constants";
 const Intro = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    const descItemMiddle = document.querySelector(".desc__item--middle");
-    const contentCenter = window.innerWidth - descItemMiddle.offsetWidth;
-    gsap.set(".desc__item--middle .desc__item--img:nth-child(3 of .desc__item--img)", {autoAlpha: 0})
+    gsap.set(".desc__item--middle .desc__item--wrap:nth-child(3) .desc__item--img", {autoAlpha: 0})
     gsap.timeline({
       scrollTrigger: {
         trigger: "#intro",
@@ -18,11 +16,11 @@ const Intro = () => {
         end: "78% 100%",
         invalidateOnRefresh: true,
         onLeaveBack: () => {
-          gsap.set(".desc__item--middle .desc__item--img:nth-child(3 of .desc__item--img)", {autoAlpha: 0}, "c")
+          gsap.set(".desc__item--middle .desc__item--wrap:nth-child(3) .desc__item--img", {autoAlpha: 0}, "c")
           gsap.set(".intro__tit", {autoAlpha: 1}, "c")
         },
         onEnter: () => {
-          gsap.to(".desc__item--middle .desc__item--img:nth-child(3 of .desc__item--img)", {autoAlpha: 1}, "d")
+          gsap.to(".desc__item--middle .desc__item--wrap:nth-child(3) .desc__item--img", {autoAlpha: 1}, "d")
           gsap.to(".intro__tit", {autoAlpha: 0}, "d")
         }
       }
@@ -67,10 +65,10 @@ const Intro = () => {
             {
               introTopText.map((arr, idx) => {
                 return (
-                  <>
+                  <div className="desc__item--wrap" key={arr.id}>
                     <div className={arr.class}>{arr.text}</div>
                     <img className="desc__item--img" src={idx % 2 === 0 ? introCircle : introCircle2} alt="" />
-                  </>
+                  </div>
                 )
               })
             }
@@ -79,12 +77,12 @@ const Intro = () => {
             {
                 introMiddleText.map((arr, idx) => {
                   return (
-                    <>
+                    <div className="desc__item--wrap" key={arr.id}>
                       <div className={arr.class}>{arr.text}</div>
                       {
                         idx % 2 === 0 ? <img className="desc__item--img" src={introCircle} alt="" /> : 
                         idx === 5 ? null : <img className="desc__item--img" src={introCircle2} alt="" />}
-                    </>
+                    </div>
                   )
                 })
               }
@@ -93,10 +91,10 @@ const Intro = () => {
             {
               introBottomText.map((arr, idx) => {
                 return (
-                  <>
+                  <div className="desc__item--wrap" key={arr.id}>
                     <img className="desc__item--img" src={idx % 2 === 0 ? introCircle : introCircle2} alt="" />
                     <div className={arr.class}>{arr.text}</div>
-                  </>
+                  </div>
                 )
               })
             }
