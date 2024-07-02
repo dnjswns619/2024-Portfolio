@@ -1,78 +1,96 @@
 export const introText = {
   top: [
     {
+      id: 1,
       class: "desc__item--text",
       text: "Tranquil"
     },
     {
+      id: 2,
       class: "desc__item--text kor",
       text: "차분한"
     },
     {
+      id: 3,
       class: "desc__item--text",
       text: "Growing"
     },
     {
+      id: 4,
       class: "desc__item--text kor",
       text: "성장하는"
     },
     {
+      id: 5,
       class: "desc__item--text",
       text: "Responsible"
     },
     {
+      id: 6,
       class: "desc__item--text kor",
       text: "책임감 있는"
     }
   ],
   middle: [
     {
+      id: 7,
       class: "desc__item--text",
       text: "Flexible"
     },
     {
+      id: 8,
       class: "desc__item--text kor",
       text: "유연한"
     },
     {
+      id: 9,
       class: "desc__item--text",
       text: "Positive"
     },
     {
+      id: 10,
       class: "desc__item--text kor",
       text: "긍정적인"
     },
     {
+      id: 11,
       class: "desc__item--text",
       text: "Faithful"
     },
     {
+      id: 12,
       class: "desc__item--text kor",
       text: "성실한"
     }
   ],
   bottom: [
     {
+      id: 13,
       class: "desc__item--text",
       text: "Scrupulous"
     },
     {
+      id: 14,
       class: "desc__item--text kor",
       text: "꼼꼼한"
     },
     {
+      id: 15,
       class: "desc__item--text",
       text: "Enthusiastic"
     },
     {
+      id: 16,
       class: "desc__item--text kor",
       text: "열정적인"
     },
     {
+      id: 17,
       class: "desc__item--text",
       text: "Scrupulous"
     },
     {
+      id:18,
       class: "desc__item--text kor",
       text: "꼼꼼한"
     }
@@ -81,6 +99,7 @@ export const introText = {
 
 export const portContent = [
   {
+    id: 1,
     title: "MCST",
     cardText : "MCST",
     skill: ["html", "css", "javascript"],
@@ -91,6 +110,7 @@ export const portContent = [
     imgSrc: "intro_circle0"
   },
   {
+    id: 2,
     title: "Apple",
     skill: ["html", "css", "javascript"],
     desc: `Apple 홈페이지의 AirPods 3세대 소개 홈페이지를 만들었습니다.<br>
@@ -101,6 +121,7 @@ export const portContent = [
     imgSrc: "intro_circle0"
   },
   {
+    id: 3,
     title: "Enterprise blockchain",
     skill: ["html", "scss", "javascript", "gsap"],
     desc: `gsap 플러그인을 사용하여 사용사의 스크롤에 따라 변화하는 엔터프라이즈블록체인을 제작했습니다.<br>
@@ -110,6 +131,7 @@ export const portContent = [
     imgSrc: "intro_circle0"
   },
   {
+    id: 4,
     title: "Kream",
     skill: ["react", "scss", "javascript"],
     desc: `react를 사용해 kream 메인 페이지를 제작했습니다.<br>
@@ -200,6 +222,7 @@ export const workImg = [
 
 export const workContent = [
   {
+    id: 1,
     title: "초등학교 3,4학년 과학",
     skill: ["html", "css", "javascript"],
     desc: `천재교육에서 진행하는 초등학교 3,4 학년 전자저작물 제작에 참여했습니다.<br>
@@ -209,6 +232,7 @@ export const workContent = [
     imgSrc2: "code1"
   },
   {
+    id: 2,
     title: "AIDT 고등학교 영어",
     skill: ["html", "css"],
     desc: `천재교육에서 진행하는 AIDT 고등학교 영어에 선임 퍼블리셔로 제작에 참여했습니다.<br>신입 혹은 다른 팀원 분들이 쉽게 제작할 수 있도록 하기위한 프로토 제작과 다른 여러 페이지 제작을 도맡아 했으며 디자인팀, 개발팀, 그리고 기획사와도 소통하며 제작을 하였습니다.<br>
@@ -218,6 +242,7 @@ export const workContent = [
     imgSrc2: "code1"
   },
   {
+    id: 3,
     title: "고등학교 영어 전자저작물",
     skill: ["html", "css"],
     desc: `천재교육에서 진행하는 고등학교 영어 전자저작물에 선임 퍼블리셔로 제작에 참여했습니다.<br>

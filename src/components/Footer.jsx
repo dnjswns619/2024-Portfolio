@@ -36,8 +36,8 @@ const Footer = () => {
         </div>
         <p className="footer__effect--text">
           {
-            effectTextSplit.map((text) => {
-              return <span className="text">{text}</span>
+            effectTextSplit.map((text, idx) => {
+              return <span className="text" key={idx}>{text}</span>
             })
           }
         </p>

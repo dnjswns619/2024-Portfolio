@@ -52,6 +52,11 @@
       color: #fff;
       white-space: noWrap;
       font-family: var(--font-iropke);
+      &--wrap {
+        display: flex;
+        align-items: center;
+        gap: 2vw;
+      }
       &--top {
         align-self: flex-start;
         position: relative;

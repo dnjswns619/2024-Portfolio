@@ -58,7 +58,6 @@ const About = () => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    console.clear();
     const aboutDesc = document.querySelector(".about__desc")
     gsap.to(".about__wrap", {
       scrollTrigger: {
