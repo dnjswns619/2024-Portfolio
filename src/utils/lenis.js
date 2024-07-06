@@ -16,13 +16,6 @@ const lenis = (state) => {
   lenis.on("scroll", (e) => {
   });
 
-  if(state !== undefined && !state) {
-    lenis.stop();
-  } else if (state !== undefined) {
-    const lenisStop = document.querySelector(".lenis-stopped")
-    lenisStop.classList.remove("lenis-stopped")
-    lenis.start();
-  }
 };
 
 export default lenis;

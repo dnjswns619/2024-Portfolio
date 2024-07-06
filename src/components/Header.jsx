@@ -1,20 +1,40 @@
-import React, { useState } from "react";
-import lenis from "../utils/lenis";
+import React, { useEffect, useState } from "react";
+import Lenis from "@studio-freight/lenis";
 
 const Header = () => {
-  const [headerState, setHeaderState] = useState(false);
+  const [headerState, setHeaderState] = useState(true);
   const toogleHeader = () => {
     setHeaderState(!headerState)
-    if (!headerState) {
+    if (headerState) {
       document.body.classList.add("on");
-      lenis(headerState);
     } else {
       document.body.classList.remove("on");
-      lenis(headerState);
     }
   }
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    
+    requestAnimationFrame(raf);
+
+    if(headerState !== undefined && !headerState) {
+      lenis.stop();
+    } else {
+      lenis.start();
+    }
+
+    return () => {
+      lenis.destroy();
+    }
+  }, [headerState])
   return (
-    <header className={headerState ? "header on" : "header"}>
+    <header className={headerState ? "header" : "header on"}>
       <h1 className="header__logo">
         <a href="#intro">Jun's Web Portfolio</a>
       </h1>
