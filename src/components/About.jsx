@@ -18,6 +18,8 @@ const About = () => {
   const targetRef2 = useRef(null);
 
   useEffect(() => {
+    let observer1RefValue = null;
+    let observer2RefValue = null;
     const observer1 = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -40,18 +42,20 @@ const About = () => {
 
     if (targetRef1.current) {
       observer1.observe(targetRef1.current);
+      observer1RefValue = targetRef1.current;
     }
 
     if (targetRef2.current) {
       observer2.observe(targetRef2.current);
+      observer2RefValue = targetRef2.current;
     }
 
     return () => {
-      if (targetRef1.current) {
-        observer1.unobserve(targetRef1.current);
+      if (observer1RefValue) {
+        observer1.unobserve(observer1RefValue);
       }
-      if (targetRef2.current) {
-        observer2.unobserve(targetRef2.current);
+      if (observer2RefValue) {
+        observer2.unobserve(observer2RefValue);
       }
     };
   }, []);
@@ -153,7 +157,7 @@ const About = () => {
                   <span className="item__main-num--sub">Month+</span>
                 </span>
                 <p className="item__main-keyword--text">
-                  성실함과 책임감으로 입사 8개월만에 선임 퍼블리셔 자리를 맡아<br />프로젝트를 진행한 경험이 있습니다.
+                  성실함과 책임감으로 입사 8개월만에 선임 퍼블리셔 자리를 맡았고<br /> 현재는 주임이 되어 프로젝트를 주도적으로 진행하고 있습니다.
                 </p>
               </div>
               <p className="item__sub-text">
@@ -210,7 +214,7 @@ const About = () => {
               </div>
               <div className="item__main-keyword">
                 <span className="item__main-num">
-                  <UseCountUp targetNumber={12} duration={2000} start={startAnimation2} />
+                  <UseCountUp targetNumber={11} duration={2000} start={startAnimation2} />
                   <span className="item__main-num--sub">Project</span>
                 </span>
                 <p className="item__main-keyword--text">
@@ -222,8 +226,8 @@ const About = () => {
                 현재는 더욱 성장하기 위해 react와<br />js를 꾸준히 공부하고 있습니다.
               </p>
               <p className="item__sub-text item__sub-text--2">
-                총 진행 프로젝트: 12개<br />
-                회사 진행 프로젝트: 3개<br />
+                총 진행 프로젝트: 11개<br />
+                회사 진행 프로젝트: 2개<br />
                 개인 진행 프로젝트: 9개
               </p>
             </div>
