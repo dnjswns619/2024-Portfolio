@@ -112,18 +112,6 @@ export const portContent = [
   },
   {
     id: 2,
-    title: "Apple",
-    skill: ["html", "css", "javascript"],
-    desc: `Apple 홈페이지의 AirPods 3세대 소개 홈페이지를 만들었습니다.<br>
-    스크롤에 따라 canvas에 이미지를 연속으로 그려
-    고해상도의 이미지가 깨지지 않고 부드럽게 스크롤 하며 텍스트들이
-    스크롤 정도에 따라 나오거나 들어가도록 제작하였습니다.`,
-    gitLink: `https://github.com/dnjswns619/Apple_AirPods`,
-    imgSrc: "intro_circle0.jpg",
-    pageLink: "https://dnjswns619.github.io/MCST/"
-  },
-  {
-    id: 3,
     title: "Enterprise blockchain",
     skill: ["html", "scss", "javascript", "gsap"],
     desc: `gsap 플러그인을 사용하여 사용사의 스크롤에 따라 변화하는 엔터프라이즈블록체인을 제작했습니다.<br>
@@ -134,7 +122,7 @@ export const portContent = [
     pageLink: "https://dnjswns619.github.io/enterpriseblockchain/"
   },
   {
-    id: 4,
+    id: 3,
     title: "Kream",
     skill: ["react", "scss", "javascript"],
     desc: `react를 사용해 kream 메인 페이지를 제작했습니다.<br>
