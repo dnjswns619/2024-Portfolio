@@ -18,13 +18,12 @@
     &--section {
       perspective: 2500px;
       position: absolute;
-      transform: scale(0.533);
+      transform: scale(0.733);
       transform-origin: left;
       width: 100vw;
       height: 100%;
       &1 {top: 0; left: 0%;}
-      &2 {top: 0; left: 33%;}
-      &3 {top: 0; left: 66%;}
+      &2 {top: 0; left: 53%;}
       .project__title {
         opacity: 0;
         position: absolute;
@@ -56,9 +55,8 @@
       &--section {
         transform-origin: top center;
         transform: scale(0.733);
-        &1 {top: -6%; left: 41%;}
-        &2 {top: 27%; left: 41%;}
-        &3 {top: 60%; left: 41%;}
+        &1 {top: 4%; left: 41%;}
+        &2 {top: 43%; left: 41%;}
       }
       img {
         opacity: 0;
