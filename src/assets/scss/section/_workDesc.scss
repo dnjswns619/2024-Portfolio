@@ -46,6 +46,11 @@
         font-family: var(--font-jua);
         color: var(--color-point);
       }
+      &__desc {
+        &--text {
+          text-transform: initial;
+        }
+      }
     }
   }
 }
@@ -89,7 +94,7 @@
       padding: 0 5vw;
       &--img {
         width: 40vw;
-        height: 60vw;
+        height: 75vw;
         .codeImg__wrap{
           &--1 {
             top: 0;
