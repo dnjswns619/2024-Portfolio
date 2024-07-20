@@ -18,12 +18,10 @@ const WorkDesc = () => {
           }
         })
         workItemAnimation
-        .fromTo(".workDesc__item1 .codeImg__wrap--1", {rotate: 10}, {rotate: -10, duration: 0.3}, "a")
-        .fromTo(".workDesc__item1 .codeImg__wrap--2", {rotate: 10}, {rotate: 1, duration: 0.3}, "a")
-        .fromTo(".workDesc__item2 .codeImg__wrap--1", {rotate: 10}, {rotate: -10, duration: 0.3}, "b")
-        .fromTo(".workDesc__item2 .codeImg__wrap--2", {rotate: 10}, {rotate: 1, duration: 0.3}, "b")
-        .fromTo(".workDesc__item3 .codeImg__wrap--1", {rotate: 10}, {rotate: -10, duration: 0.3}, "c")
-        .fromTo(".workDesc__item3 .codeImg__wrap--2", {rotate: 10}, {rotate: 1, duration: 0.3}, "c")
+        .fromTo(".workDesc__item1 .codeImg__wrap--1", {rotate: 10}, {rotate: -10, duration: 0.5}, "a")
+        .fromTo(".workDesc__item1 .codeImg__wrap--2", {rotate: 10}, {rotate: 1, duration: 0.5}, "a")
+        .fromTo(".workDesc__item2 .codeImg__wrap--1", {rotate: 10}, {rotate: -10, duration: 0.5}, "b")
+        .fromTo(".workDesc__item2 .codeImg__wrap--2", {rotate: 10}, {rotate: 1, duration: 0.5}, "b")
       },
       "(max-width: 750px)": function() {
         const workItemAnimation = gsap.timeline({
@@ -35,12 +33,10 @@ const WorkDesc = () => {
           }
         })
         workItemAnimation
-        .fromTo(".workDesc__item1 .codeImg__wrap--1", {rotate: 10}, {rotate: -10, duration: 0.3}, "a")
-        .fromTo(".workDesc__item1 .codeImg__wrap--2", {rotate: 10}, {rotate: 1, duration: 0.3}, "a")
-        .fromTo(".workDesc__item2 .codeImg__wrap--1", {rotate: 10}, {rotate: -10, duration: 0.3}, "b")
-        .fromTo(".workDesc__item2 .codeImg__wrap--2", {rotate: 10}, {rotate: 1, duration: 0.3}, "b")
-        .fromTo(".workDesc__item3 .codeImg__wrap--1", {rotate: 10}, {rotate: -10, duration: 0.3}, "c")
-        .fromTo(".workDesc__item3 .codeImg__wrap--2", {rotate: 10}, {rotate: 1, duration: 0.3}, "c")
+        .fromTo(".workDesc__item1 .codeImg__wrap--1", {rotate: 10}, {rotate: -10, duration: 0.5}, "a")
+        .fromTo(".workDesc__item1 .codeImg__wrap--2", {rotate: 10}, {rotate: 1, duration: 0.5}, "a")
+        .fromTo(".workDesc__item2 .codeImg__wrap--1", {rotate: 10}, {rotate: -10, duration: 0.5}, "b")
+        .fromTo(".workDesc__item2 .codeImg__wrap--2", {rotate: 10}, {rotate: 1, duration: 0.5}, "b")
       }
     });
   }, []);
