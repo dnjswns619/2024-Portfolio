@@ -25,6 +25,7 @@
 }
 @media screen and (max-width: 1024px) {
   .header {
+    &__logo { font-size: 1.2rem; }
     &__nav {
       display: none;
     }

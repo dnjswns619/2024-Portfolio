@@ -93,7 +93,7 @@
     .item2 {
       .item__sub-text {
         &--1 { left: 47vw; }
-        &--2 { top: 45rem; left: 70vw; }
+        &--2 { top: 40rem; left: 70vw; }
       }
       &__img-box {
         overflow: hidden;
@@ -132,7 +132,7 @@
     }
     &--line {
       overflow: hidden;
-      height: 100%;
+      height: 100vh;
       padding-right: 20vw;
       writing-mode: vertical-rl;
       .desc__line {
