@@ -8,7 +8,6 @@ const UseCountUp = ({ targetNumber, duration, start }) => {
   useEffect(() => {
     if(!start) return;
 
-    let startNum = 0;
     const end = parseInt(targetNumber, 10);
     let startTime = null;
 
