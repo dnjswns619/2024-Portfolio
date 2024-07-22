@@ -4,7 +4,7 @@
   align-items: center;
   flex: 0 0 33%;
   text-align: center;
-  gap: 2rem;
+  gap: 4vh;
   &__title {
     position: relative;
     width: 100%;
@@ -44,7 +44,6 @@
     &--text {
       width: 80%;
       text-align: left;
-      text-transform: capitalize;
     }
   }
   &__git-link {
@@ -57,7 +56,6 @@
     &--text {
       width: 80%;
       text-align: left;
-      text-transform: capitalize;
     }
   }
 }
@@ -105,7 +103,7 @@
       font-size: 8vw;
     }
     &__skill {
-      font-size: 14px;
+      font-size: min(3vw, 3.5vh);
       &--tit {
         width: 25%;
       }
@@ -114,7 +112,7 @@
       }
     }
     &__desc {
-      font-size: 14px;
+      font-size: min(3vw, 3.5vh);
       &--tit {
         width: 25%;
       }
@@ -123,7 +121,7 @@
       }
     }
     &__git-link {
-      font-size: 14px;
+      font-size: min(3vw, 3.5vh);
       &--tit {
         width: 25%;
       }

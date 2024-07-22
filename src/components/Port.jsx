@@ -94,7 +94,7 @@ const Port = () => {
           }
         })
         gsap.utils.toArray(".port__item").forEach((item) => {
-          portItemAnimation.to(item, {gap: () => 8 + "vw", yPercent: -10})
+          portItemAnimation.to(item, {gap: () => 10 + "vw", yPercent: -10})
         })
       }
     });
