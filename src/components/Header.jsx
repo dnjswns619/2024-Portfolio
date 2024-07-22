@@ -36,18 +36,18 @@ const Header = () => {
   return (
     <header className={headerState ? "header" : "header on"}>
       <h1 className="header__logo">
-        <a href="#intro" rel="noopener noreferrer">Jun's Web Portfolio</a>
+        <a href="#intro">Jun's Web Portfolio</a>
       </h1>
       <nav className="header__nav nav">
         <ul className="nav__wrap">
           <li className="nav__item">
-            <a href="#about" rel="noopener noreferrer">About</a>
+            <a href="#about">About</a>
           </li>
           <li className="nav__item">
-            <a href="#port" rel="noopener noreferrer">Portfolio</a>
+            <a href="#port">Portfolio</a>
           </li>
           <li className="nav__item">
-            <a href="#work" rel="noopener noreferrer">Work</a>
+            <a href="#work">Work</a>
           </li>
         </ul>
       </nav>
@@ -62,13 +62,13 @@ const Header = () => {
       <div className="header__mobileMenu">
         <ul className="header__mobileMenu--wrap">
           <li className="header__mobileMenu--item item">
-            <a className="item__link" href="#about" onClick={toogleHeader} rel="noopener noreferrer">About</a>
+            <a className="item__link" href="#about" onClick={toogleHeader}>About</a>
           </li>
           <li className="header__mobileMenu--item item">
-            <a className="item__link" href="#port" onClick={toogleHeader} rel="noopener noreferrer">Portfolio</a>
+            <a className="item__link" href="#port" onClick={toogleHeader}>Portfolio</a>
           </li>
           <li className="header__mobileMenu--item item">
-            <a className="item__link" href="#work" onClick={toogleHeader} rel="noopener noreferrer">Work</a>
+            <a className="item__link" href="#work" onClick={toogleHeader}>Work</a>
           </li>
         </ul>
       </div>
