@@ -46,7 +46,7 @@ const Footer = () => {
         <p className="footer__tel footer__info">
           <span className="footer__tit">Tel :</span> 010-8329-0566</p>
         <p className="footer__github footer__info">
-          <span className="footer__tit">GitHub :</span> <a href="https://github.com/dnjswns619">https://github.com/dnjswns619</a></p>
+          <span className="footer__tit">GitHub :</span> <a href="https://github.com/dnjswns619" rel="noopener noreferrer">https://github.com/dnjswns619</a></p>
 
       </div>
     </footer>

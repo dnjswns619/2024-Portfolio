@@ -15,7 +15,7 @@ const ProjectDesc = ({data}) => {
           gitLink ? 
           <div className="projectDesc__git-link">
             <div className="projectDesc__git-link--tit">GitHub: </div>
-            <a href={gitLink} className="projectDesc__gitLink">{gitLink}</a>
+            <a href={gitLink} className="projectDesc__gitLink" rel="noopener noreferrer">{gitLink}</a>
           </div> : null
         }
     </div>
