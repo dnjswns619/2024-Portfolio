@@ -82,7 +82,7 @@ const Work = () => {
         // workProject 1
         workImgAnimation1
         .to(".work__img-box--section", { autoAlpha: 0, duration: 0.2 }, "a")
-        .fromTo(".work__img-box--section1", {top: () => 4 + "%", left: () => 41 + "%", scale: 0.733, autoAlpha: 1 }, {top: () => 13 + "%", left: () => 41 + "%", scale: 1, autoAlpha: 1 }, "a")
+        .fromTo(".work__img-box--section1", {top: () => 4 + "vh", left: () => 41 + "%", scale: 0.733, autoAlpha: 1 }, {top: () => 13 + "%", left: () => 41 + "%", scale: 1, autoAlpha: 1 }, "a")
         workImg1.forEach((img, idx) => {
           workImgAnimation1
           .fromTo(img, {left: () => 0 + "vw"}, { left: () => 9 + "vw", duration: 0.1 }, "b")
@@ -91,13 +91,13 @@ const Work = () => {
           .fromTo(img,{rotateY: 0}, {rotateY: -180})
         })
         workImgAnimation1
-        .to(".work__img-box--section1", {top: () => 4 + "%", left: () => 33 + "%", scale: 0.733, autoAlpha: 1 })
+        .to(".work__img-box--section1", {top: () => 4 + "vh", left: () => 33 + "%", scale: 0.733, autoAlpha: 1 })
         .to(".work__img-box--section", { autoAlpha: 1 })
 
         // workProject 2
         workImgAnimation2
         .to(".work__img-box--section", { autoAlpha: 0, duration: 0.4 }, "c")
-        .fromTo(".work__img-box--section2", {top: () => 43 + "%", left: () => 41 + "%", scale: 0.733, autoAlpha: 1}, {top: () => 13 + "%", left: () => 41 + "%", scale: 1, autoAlpha: 1 }, "c")
+        .fromTo(".work__img-box--section2", {top: () => 43 + "vh", left: () => 41 + "%", scale: 0.733, autoAlpha: 1}, {top: () => 13 + "%", left: () => 41 + "%", scale: 1, autoAlpha: 1 }, "c")
         workImg2.forEach((img, idx) => {
           workImgAnimation2
           .fromTo(img, {left: () => 0 + "vw"}, { left: () => 9 + "vw", duration: 0.1 }, "d")
@@ -106,7 +106,7 @@ const Work = () => {
           .fromTo(img,{rotateY: 0}, {rotateY: -180})
         })
         workImgAnimation2
-        .to(".work__img-box--section2", {top: () => 43 + "%", left: () => 33 + "%", scale: 0.733, autoAlpha: 1 })
+        .to(".work__img-box--section2", {top: () => 43 + "vh", left: () => 33 + "%", scale: 0.733, autoAlpha: 1 })
         .to(".work__img-box--section", { autoAlpha: 1 })
       }
     });
