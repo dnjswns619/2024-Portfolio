@@ -6,7 +6,7 @@
     @include flexCol-center;
     @include position-sticky;
     width: 100%;
-    height: max(100vh, 945px);
+    height: 100vh;
     padding: 0 4.6vw;
     overflow: hidden;
   }

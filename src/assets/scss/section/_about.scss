@@ -17,7 +17,7 @@
     @include flex-center;
     width: 100vw;
     height: 100vh;
-    font-size: 10vw;
+    font-size: min(10vw, 15vh);
     color: #fff;
   }
   &__desc {
@@ -29,26 +29,26 @@
     }
     .item {
       &__main-num { 
-        font-size: 7vw;
+        font-size: min(7vw, 15vh);
         color: #e65100;
         &--sub {
-          font-size: 3vw;
+          font-size: min(3vw, 11vh);
         }
       }
       &__main-keyword {
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size: 2vw;
+        font-size: min(2vw, 9vh);
         font-family: var(--font-jua);
-        &--text { font-size: 1.5vw; }
+        &--text { font-size: min(1.5vw, 8.5vh); }
       }
       &__sub-text {
         position: absolute;
-        top: 20vh;
+        top: 25vh;
         left: 21vw;
         font-family: var(--font-jua);
-        font-size: 1.2vw;
+        font-size: min(1.2vw, 8.2vh);
       }
     }
     .item1 {
@@ -61,27 +61,27 @@
         &--1 {
           top: 28vh;
           left: -15vw;
-          width: 18vw;
-          height: 18vw;
+          width: min(18vw, 18vh);
+          height: min(18vw, 18vh);
         }
         &--2 {
           left: 32vw;
           bottom: 20vh;
-          width: 9vw;
-          height: 9vw;
+          width: min(9vw, 9vh);
+          height: min(9vw, 9vh);
           
         }
         &--3 {
-          top: 4vh;
+          top: 25vh;
           left: 63vw;
-          width: 14vw;
-          height: 14vw;
+          width: min(14vw, 14vh);
+          height: min(14vw, 14vh);
         }
         &--4 {
           left: 59vw;
           bottom: 3vh;
-          width: 18vw;
-          height: 18vw;
+          width: min(18vw, 18vh);
+          height: min(18vw, 18vh);
         }
         &--img {
           width: 100%;
@@ -93,35 +93,35 @@
     .item2 {
       .item__sub-text {
         &--1 { left: 47vw; }
-        &--2 { top: 40rem; left: 70vw; }
+        &--2 { top: 70vh; left: 70vw; }
       }
       &__img-box {
         overflow: hidden;
         position: absolute;
         border-radius: 100%;
         &--1 {
-          top: 15vh;
+          top: 25vh;
           left:5vw;
-          width: 16vw;
-          height: 16vw;
+          width: min(16vw, 16vh);
+          height: min(16vw, 16vh);
         }
         &--2 {
           left: 57vw;
           bottom: 9vh;
-          width: 9vw;
-          height: 9vw;
+          width: min(9vw, 9vh);
+          height: min(9vw, 9vh);
         }
         &--3 {
           top: 20vh;
           right: 11vw;
-          width: 12vw;
-          height: 12vw;
+          width: min(12vw, 12vh);
+          height: min(12vw, 12vh);
         }
         &--4 {
           left: 10vw;
           bottom: 8vh;
-          width: 18vw;
-          height: 18vw;
+          width: min(18vw, 18vh);
+          height: min(18vw, 18vh);
         }
         &--img {
           width: 100%;
@@ -155,20 +155,20 @@
 }
 @media screen and (min-width: 1025px) and (max-width: 1300px) {
   .about {
-    &__title { font-size: 14vw; }
+    &__title { font-size: min(14vw, 14vh); }
     &__desc {
       .item {
         &__main-num { 
-          font-size: 14vw;
+          font-size: min(14vw, 14vh);
           &--sub {
-            font-size: 6vw;
+            font-size: min(6vw, 6vh);
           }
         }
         &__main-keyword {
-          &--text { font-size: 2vw; }
+          &--text { font-size: min(2vw, 2vh); }
         }
         &__sub-text {
-          font-size: 1.7vw;
+          font-size: min(1.7vw, 1.7vh);
         }
       }
     }
@@ -177,20 +177,20 @@
 // 테블릿 반응형
 @media screen and (min-width: 751px) and (max-width: 1024px) {
   .about {
-    &__title { font-size: 16vw; }
+    &__title { font-size: min(16vw, 16vh); }
     &__desc {
       .item {
         &__main-num { 
-          font-size: 16vw;
+          font-size: min(16vw, 16vh);
           &--sub {
-            font-size: 8vw;
+            font-size: min(8vw, 8vh);
           }
         }
         &__main-keyword {
-          &--text { font-size: 2.5vw; }
+          &--text { font-size: min(2.5vw, 2.5vh); }
         }
         &__sub-text {
-          font-size: 2.2vw;
+          font-size: min(2.2vw, 2.2vh);
         }
       }
     }
@@ -199,20 +199,20 @@
 // 모바일 반응형
 @media screen and (max-width: 750px) {
   .about {
-    &__title { font-size: 16vw; }
+    &__title { font-size: min(16vw, 16vh); }
     &__desc {
       .item {
         &__main-num { 
-          font-size: 18vw;
+          font-size: min(18vw, 18vh);
           &--sub {
-            font-size: 10vw;
+            font-size: min(10vw, 10vh);
           }
         }
         &__main-keyword {
-          &--text { font-size: 2.8vw; }
+          &--text { font-size: min(2.8vw, 3vh); }
         }
         &__sub-text {
-          font-size: 2.6vw;
+          font-size: min(2.6vw, 2.8vh);
         }
       }
     }
