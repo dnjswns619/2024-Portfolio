@@ -15,14 +15,14 @@
     &--img {
       position: relative;
       width: 20vw;
-      height: 35vw;
+      height: 42vw;
       padding: 4px;
       border-radius: 20px;
       .codeImg__wrap{
         position: absolute;
         width: 100%;
         &--1 {
-          top: 3vw;
+          top: 30%;
           left: -50%;
           transform-origin: right top;
           transform: rotate(10deg);
@@ -45,6 +45,7 @@
       &__title {
         font-family: var(--font-jua);
         color: var(--color-point);
+        font-size: 3.5vw;
       }
       &__desc {
         &--text {
@@ -97,7 +98,7 @@
         height: 75vw;
         .codeImg__wrap{
           &--1 {
-            top: 0;
+            top: 25%;
           }
           &--2 {
             top: 7vw;
