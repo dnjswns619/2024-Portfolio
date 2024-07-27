@@ -88,5 +88,34 @@
       &--img {width: 2.5vw; height: 2.5vw; border-radius: 50%; }
     }
   }
+  @media screen and (max-width: 550px) {
+    &__desc {
+      .desc__item {
+        &--top {
+          font-size: 6vw;
+          .desc__item--text.kor {
+            font-size: 5vw;
+          }
+        }
+        &--middle {
+          position: relative;
+          left: 7px;
+          justify-content: center;
+          position: relative;
+          font-size: 4.5vw;
+          .desc__item--text.kor {
+            font-size: 4vw;
+          }
+        }
+        &--bottom {
+          font-size: 5vw;
+          .desc__item--text.kor {
+            font-size: 5.5vw;
+          }
+        }
+        &--img {width: 4.5vw; height: 4.5vw; }
+      }
+    }
+  }
 }
 body {background-color: #000;}
