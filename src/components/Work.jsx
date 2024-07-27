@@ -52,62 +52,74 @@ const Work = () => {
         workImgAnimation1
         .to(".work__img-box--section", { autoAlpha: 0, duration: 0.2 }, "a")
         .fromTo(".work__img-box--section1", {top: () => 0 + "%", left: () => 0 + "%", scale: 0.733, autoAlpha: 1 }, {top: () => 0 + "%", left: () => 0 + "%", scale: 1, autoAlpha: 1 }, "a")
+        .fromTo(".work__title--aidt", {autoAlpha: 1}, {autoAlpha: 0}, "a")
         workImg1.forEach((img, idx) => {
           workImgAnimation1
           .fromTo(img, {left: () => 12 + "vw"}, { left: () => 50 + "vw", duration: 0.1 }, "b")
           .fromTo(workImg1[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "b")
           .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
-          .fromTo(img,{rotateY: 0}, {rotateY: -180})
+          .fromTo(img,{rotateY: 0, filter: "blur(0px)"}, {rotateY: -180, filter: "blur(3px)"})
         })
         workImgAnimation1
         .to(".work__img-box--section1", {top: () => 0 + "%", left: () => 0 + "%", scale: 0.733, autoAlpha: 1 })
-        .to(".work__img-box--section", { autoAlpha: 1 })
+        .to(".work__img-box--section", { autoAlpha: 1 }, "e")
+        .to(".work__title--aidt", {autoAlpha: 1}, "e")
 
         // workProject 2
         workImgAnimation2
         .to(".work__img-box--section", { autoAlpha: 0, duration: 0.4 }, "c")
         .fromTo(".work__img-box--section2", {top: () => 0 + "%", left: () => 53 + "%", scale: 0.733, autoAlpha: 1}, {top: () => 0 + "%", left: 0, scale: 1, autoAlpha: 1 }, "c")
+        .fromTo(".work__title--sci", {autoAlpha: 1}, {autoAlpha: 0}, "c")
         workImg2.forEach((img, idx) => {
           workImgAnimation2
           .fromTo(img, {left: () => 12 + "vw"}, { left: () => 50 + "vw", duration: 0.1 }, "d")
           .fromTo(workImg2[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "d")
           .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
-          .fromTo(img,{rotateY: 0}, {rotateY: -180})
+          .fromTo(img,{rotateY: 0, filter: "blur(0px)"}, {rotateY: -180, filter: "blur(3px)"})
         })
         workImgAnimation2
         .to(".work__img-box--section2", {top: () => 0 + "%", left: () => 53 + "%", scale: 0.733, autoAlpha: 1 })
-        .to(".work__img-box--section", { autoAlpha: 1 })
+        .to(".work__img-box--section", { autoAlpha: 1 }, "f")
+        .to(".work__title--sci", {autoAlpha: 1}, "f")
       },
       "(max-width: 750px)": function() { //모바일 반응형
         // workProject 1
         workImgAnimation1
         .to(".work__img-box--section", { autoAlpha: 0, duration: 0.2 }, "a")
         .fromTo(".work__img-box--section1", {top: () => 4 + "vh", left: () => 41 + "%", scale: 0.733, autoAlpha: 1 }, {top: () => 13 + "%", left: () => 41 + "%", scale: 1, autoAlpha: 1 }, "a")
+        .fromTo(".work__title--aidt", {autoAlpha: 1}, {autoAlpha: 0}, "a")
+        .fromTo(".work__title--sci", {top: () => 26 + "vh", maxWidth: () => 40 + "%"}, {top: () => 20 + "vh", maxWidth: () => 84 + "%"}, "a")
         workImg1.forEach((img, idx) => {
           workImgAnimation1
           .fromTo(img, {left: () => 0 + "vw"}, { left: () => 9 + "vw", duration: 0.1 }, "b")
           .fromTo(workImg1[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "b")
           .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
-          .fromTo(img,{rotateY: 0}, {rotateY: -180})
+          .fromTo(img,{rotateY: 0, filter: "blur(0px)"}, {rotateY: -180, filter: "blur(3px)"})
         })
         workImgAnimation1
-        .to(".work__img-box--section1", {top: () => 4 + "vh", left: () => 33 + "%", scale: 0.733, autoAlpha: 1 })
-        .to(".work__img-box--section", { autoAlpha: 1 })
+        .to(".work__img-box--section1", {top: () => 4 + "vh", left: () => 20 + "%", scale: 0.733, autoAlpha: 1 }, "g")
+        .to(".work__title--sci", {top: () => 26 + "vh", maxWidth: () => 40 + "%", left: () => 52 + "vw"}, "g")
+        .to(".work__img-box--section", { autoAlpha: 1 }, "e")
+        .to(".work__title--aidt", {autoAlpha: 1}, "e")
 
         // workProject 2
         workImgAnimation2
         .to(".work__img-box--section", { autoAlpha: 0, duration: 0.4 }, "c")
         .fromTo(".work__img-box--section2", {top: () => 43 + "vh", left: () => 41 + "%", scale: 0.733, autoAlpha: 1}, {top: () => 13 + "%", left: () => 41 + "%", scale: 1, autoAlpha: 1 }, "c")
+        .fromTo(".work__title--sci", {autoAlpha: 1}, {autoAlpha: 0}, "c")
+        .fromTo(".work__title--aidt", {top: () => 67 + "vh", maxWidth: () => 40 + "%"}, {top: () => 20 + "vh", maxWidth: () => 84 + "%"}, "c")
         workImg2.forEach((img, idx) => {
           workImgAnimation2
           .fromTo(img, {left: () => 0 + "vw"}, { left: () => 9 + "vw", duration: 0.1 }, "d")
           .fromTo(workImg2[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "d")
           .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
-          .fromTo(img,{rotateY: 0}, {rotateY: -180})
+          .fromTo(img,{rotateY: 0, filter: "blur(0px)"}, {rotateY: -180, filter: "blur(3px)"})
         })
         workImgAnimation2
-        .to(".work__img-box--section2", {top: () => 43 + "vh", left: () => 33 + "%", scale: 0.733, autoAlpha: 1 })
-        .to(".work__img-box--section", { autoAlpha: 1 })
+        .to(".work__img-box--section2", {top: () => 43 + "vh", left: () => 20 + "%", scale: 0.733, autoAlpha: 1 }, "h")
+        .to(".work__title--aidt", {top: () => 67 + "vh", maxWidth: () => 84 + "%", left: () => 52 + "vw"}, "h")
+        .to(".work__img-box--section", { autoAlpha: 1 }, "f")
+        .to(".work__title--sci", {autoAlpha: 1}, "f")
       }
     });
 
@@ -144,9 +156,11 @@ const Work = () => {
     <section id="work" className="work">
       <div className="work__wrap">
         <div className="work__img-box">
+          <h2 className="work__title work__title--sci">초등 3,4학년 과학 전자저작물</h2>
+          <h2 className="work__title work__title--aidt">고등 공통 영어 AIDT</h2>
           <div className="work__img-box--section work__img-box--section1">
             {renderWorkImg(workImgLength, "sci")}
-            </div>
+          </div>
           <div className="work__img-box--section work__img-box--section2">
             {renderWorkImg(workImgLength, "aidt")}
           </div>
