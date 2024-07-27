@@ -161,7 +161,7 @@ const Port = () => {
             return(
               idx % 2 === 0 ? 
               <div className={`port__item port__item--${idx + 1}`} key={port.id}>
-                <a className="port__item--img imgBox imgBox__left" href={port.pageLink} target="_blank" rel="noreferrer noopener">
+                <a className="port__item--img imgBox imgBox__left" href={port?.pageLink} target="_blank" rel="noreferrer noopener">
                   <div className="imgBox__item imgBox__front">
                     {
                       port.cardText ? <h2 dangerouslySetInnerHTML={{__html: port.cardText}}></h2> : <h2>{port.title}</h2>
@@ -176,7 +176,7 @@ const Port = () => {
               </div> :
               <div className={`port__item port__item--${idx + 1}`} key={port.id}>
                 <ProjectDesc className="port__item--desc" data={port} />
-                <a className="port__item--img imgBox imgBox__right" href={port.pageLink} target="_blank" rel="noreferrer noopener">
+                <a className="port__item--img imgBox imgBox__right" href={port?.pageLink} target="_blank" rel="noreferrer noopener">
                   <div className="imgBox__item imgBox__front">
                     {
                       port.cardText ? <h2 dangerouslySetInnerHTML={{__html: port.cardText}}></h2> : <h2>{port.title}</h2>
