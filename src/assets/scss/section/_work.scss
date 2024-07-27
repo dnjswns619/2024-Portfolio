@@ -10,6 +10,20 @@
     height: 100vh;
     background-color: var(--mainBg-color);
   }
+  &__title {
+    position: absolute;
+    font-family: var(--font-jua);
+    font-size: min(5vw, 5vh);
+    color: var(--color-point);
+    &--sci {
+      top: 20vh;
+      left: 8vw;
+    }
+    &--aidt {
+      top: 20vh;
+      right: 8vw;
+    }
+  }
   &__img-box {
     opacity: 0;
     display: flex;
@@ -51,6 +65,17 @@
 // 모바일 반응형
 @media screen and (max-width: 750px) {
   .work {
+    &__title {
+      max-width: 40vw;
+      &--sci {
+        top: 26vh;
+      }
+      &--aidt {
+        top: 67vh;
+        left: 8vw;
+        right: auto;
+      }
+    }
     &__img-box {
       &--section {
         transform-origin: top center;
