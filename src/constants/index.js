@@ -125,7 +125,7 @@ export const portContent = [
     id: 3,
     title: "Kream",
     skill: ["react", "scss", "javascript"],
-    desc: `react를 사용해 kream 메인 페이지를 제작했습니다.<br>
+    desc: `react를 사용해 kream 메인 페이지 pc버전을 제작했습니다.<br>
     슬라이더는 swiper slide를 사용하였고 컴포넌트를 나누고 useState를 통해 상태를 관리하고 그 상태에 따라 여러 데이터를 전달하고 그 데이터를 이용해 html 코드를 만들면서 react를 이해하며 사용할 수 있었습니다.
     `,
     gitLink: `https://github.com/dnjswns619/Kream`,
