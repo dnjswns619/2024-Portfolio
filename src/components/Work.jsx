@@ -58,7 +58,7 @@ const Work = () => {
           .fromTo(img, {left: () => 12 + "vw"}, { left: () => 50 + "vw", duration: 0.1 }, "b")
           .fromTo(workImg1[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "b")
           .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
-          .fromTo(img,{rotateY: 0, filter: "blur(0px)"}, {rotateY: -180, filter: "blur(3px)"})
+          .fromTo(img,{rotateY: 0, filter: "blur(0px)"}, {rotateY: -180, filter: "blur(1px)"})
         })
         workImgAnimation1
         .to(".work__img-box--section1", {top: () => 0 + "%", left: () => 0 + "%", scale: 0.733, autoAlpha: 1 })
@@ -75,7 +75,7 @@ const Work = () => {
           .fromTo(img, {left: () => 12 + "vw"}, { left: () => 50 + "vw", duration: 0.1 }, "d")
           .fromTo(workImg2[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "d")
           .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
-          .fromTo(img,{rotateY: 0, filter: "blur(0px)"}, {rotateY: -180, filter: "blur(3px)"})
+          .fromTo(img,{rotateY: 0, filter: "blur(0px)"}, {rotateY: -180, filter: "blur(1px)"})
         })
         workImgAnimation2
         .to(".work__img-box--section2", {top: () => 0 + "%", left: () => 53 + "%", scale: 0.733, autoAlpha: 1 })
@@ -94,7 +94,7 @@ const Work = () => {
           .fromTo(img, {left: () => 0 + "vw"}, { left: () => 9 + "vw", duration: 0.1 }, "b")
           .fromTo(workImg1[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "b")
           .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
-          .fromTo(img,{rotateY: 0, filter: "blur(0px)"}, {rotateY: -180, filter: "blur(3px)"})
+          .fromTo(img,{rotateY: 0, filter: "blur(0px)"}, {rotateY: -180, filter: "blur(1px)"})
         })
         workImgAnimation1
         .to(".work__img-box--section1", {top: () => 4 + "vh", left: () => 20 + "%", scale: 0.733, autoAlpha: 1 }, "g")
@@ -113,7 +113,7 @@ const Work = () => {
           .fromTo(img, {left: () => 0 + "vw"}, { left: () => 9 + "vw", duration: 0.1 }, "d")
           .fromTo(workImg2[idx + 1], {autoAlpha: 0}, {autoAlpha: 1, duration: 0.1}, "d")
           .fromTo(img,{zIndex: () => -idx}, {zIndex: 1, duration: 0.1})
-          .fromTo(img,{rotateY: 0, filter: "blur(0px)"}, {rotateY: -180, filter: "blur(3px)"})
+          .fromTo(img,{rotateY: 0, filter: "blur(0px)"}, {rotateY: -180, filter: "blur(1px)"})
         })
         workImgAnimation2
         .to(".work__img-box--section2", {top: () => 43 + "vh", left: () => 20 + "%", scale: 0.733, autoAlpha: 1 }, "h")

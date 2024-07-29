@@ -15,9 +15,10 @@
     font-family: var(--font-jua);
     font-size: min(5vw, 5vh);
     color: var(--color-point);
+    word-break: keep-all;
     &--sci {
       top: 20vh;
-      left: 8vw;
+      left: 5vw;
     }
     &--aidt {
       top: 20vh;
@@ -59,6 +60,13 @@
       top: 28vh;
       left: 12vw;
       &:nth-of-type(1) { opacity: 1; }
+    }
+  }
+}
+@media screen and (max-width: 1240px) {
+  .work {
+    &__title {
+      font-size: min(4vw, 4vh);
     }
   }
 }
