@@ -2,10 +2,10 @@ const ProjectDesc = ({data}) => {
   const {title, skill, desc, gitLink} = {...data}
   return (
     <div className="projectDesc">
-      <div className="projectDesc__title">{title}</div>
+      <h3 className="projectDesc__title">{title}</h3>
         <div className="projectDesc__skill">
           <div className="projectDesc__skill--tit">Language :</div>
-          <div className="projectDesc__skill--text">{skill.join(", ")}</div>
+          <p className="projectDesc__skill--text">{skill.join(", ")}</p>
         </div>
         <div className="projectDesc__desc">
           <div className="projectDesc__desc--tit">Description :</div>

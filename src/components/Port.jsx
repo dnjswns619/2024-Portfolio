@@ -109,7 +109,7 @@ const Port = () => {
       ease: "none"
     })
     portText1Animation
-    .to(".imgBox__front h2", {"--after-width1": () => 0 + "%", duration: 1}, "b")
+    .to(".imgBox__front h3", {"--after-width1": () => 0 + "%", duration: 1}, "b")
     .to(".port__item .projectDesc", {"--textColor-progress1": () => 100 + "%", duration: 1}, "b")
 
     const portText2Animation = gsap.timeline({
@@ -122,7 +122,7 @@ const Port = () => {
       ease: "none"
     })
     portText2Animation
-    .to(".imgBox__front h2", {"--after-width2": () => 0 + "%", duration: 1}, "b")
+    .to(".imgBox__front h3", {"--after-width2": () => 0 + "%", duration: 1}, "b")
     .to(".port__item .projectDesc", {"--textColor-progress2": () => 100 + "%", duration: 1}, "b")
 
     const portText3Animation = gsap.timeline({
@@ -135,7 +135,7 @@ const Port = () => {
       ease: "none"
     })
     portText3Animation
-    .to(".imgBox__front h2", {"--after-width3": () => 0 + "%", duration: 1}, "b")
+    .to(".imgBox__front h3", {"--after-width3": () => 0 + "%", duration: 1}, "b")
     .to(".port__item .projectDesc", {"--textColor-progress3": () => 100 + "%", duration: 1}, "b")
 
     const portText4Animation = gsap.timeline({
@@ -148,7 +148,7 @@ const Port = () => {
       ease: "none"
     })
     portText4Animation
-    .to(".imgBox__front h2", {"--after-width4": () => 0 + "%", duration: 1}, "b")
+    .to(".imgBox__front h3", {"--after-width4": () => 0 + "%", duration: 1}, "b")
     .to(".port__item .projectDesc", {"--textColor-progress4": () => 100 + "%", duration: 1}, "b")
   })
 
@@ -164,7 +164,7 @@ const Port = () => {
                 <a className="port__item--img imgBox imgBox__left" href={port?.pageLink} target="_blank" rel="noreferrer noopener">
                   <div className="imgBox__item imgBox__front">
                     {
-                      port.cardText ? <h2 dangerouslySetInnerHTML={{__html: port.cardText}}></h2> : <h2>{port.title}</h2>
+                      port.cardText ? <h3 dangerouslySetInnerHTML={{__html: port.cardText}}></h3> : <h3>{port.title}</h3>
                     }
                     
                   </div>
@@ -179,7 +179,7 @@ const Port = () => {
                 <a className="port__item--img imgBox imgBox__right" href={port?.pageLink} target="_blank" rel="noreferrer noopener">
                   <div className="imgBox__item imgBox__front">
                     {
-                      port.cardText ? <h2 dangerouslySetInnerHTML={{__html: port.cardText}}></h2> : <h2>{port.title}</h2>
+                      port.cardText ? <h3 dangerouslySetInnerHTML={{__html: port.cardText}}></h3> : <h3>{port.title}</h3>
                     }
                   </div>
                   <div className="imgBox__item imgBox__behind">
