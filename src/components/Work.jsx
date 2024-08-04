@@ -51,7 +51,7 @@ const Work = () => {
         // workProject 1
         workImgAnimation1
         .to(".work__img-box--section", { autoAlpha: 0, duration: 0.2 }, "a")
-        .fromTo(".work__img-box--section1", {top: () => 0 + "%", left: () => 0 + "%", scale: 0.733, autoAlpha: 1 }, {top: () => 0 + "%", left: () => 0 + "%", scale: 1, autoAlpha: 1 }, "a")
+        .fromTo(".work__img-box--section1", {top: () => 0 + "%", left: () => 1.5 + "%", scale: 0.733, autoAlpha: 1 }, {top: () => 0 + "%", left: () => 0 + "%", scale: 1, autoAlpha: 1 }, "a")
         .fromTo(".work__title--aidt", {autoAlpha: 1}, {autoAlpha: 0}, "a")
         workImg1.forEach((img, idx) => {
           workImgAnimation1
@@ -61,14 +61,14 @@ const Work = () => {
           .fromTo(img,{rotateY: 0, filter: "blur(0px)"}, {rotateY: -180, filter: "blur(1px)"})
         })
         workImgAnimation1
-        .to(".work__img-box--section1", {top: () => 0 + "%", left: () => 0 + "%", scale: 0.733, autoAlpha: 1 })
+        .to(".work__img-box--section1", {top: () => 0 + "%", left: () => 1.5 + "%", scale: 0.733, autoAlpha: 1 })
         .to(".work__img-box--section", { autoAlpha: 1 }, "e")
         .to(".work__title--aidt", {autoAlpha: 1}, "e")
 
         // workProject 2
         workImgAnimation2
         .to(".work__img-box--section", { autoAlpha: 0, duration: 0.4 }, "c")
-        .fromTo(".work__img-box--section2", {top: () => 0 + "%", left: () => 53 + "%", scale: 0.733, autoAlpha: 1}, {top: () => 0 + "%", left: 0, scale: 1, autoAlpha: 1 }, "c")
+        .fromTo(".work__img-box--section2", {top: () => 0 + "%", left: () => 58 + "%", scale: 0.733, autoAlpha: 1}, {top: () => 0 + "%", left: 0, scale: 1, autoAlpha: 1 }, "c")
         .fromTo(".work__title--sci", {autoAlpha: 1}, {autoAlpha: 0}, "c")
         workImg2.forEach((img, idx) => {
           workImgAnimation2
@@ -78,7 +78,7 @@ const Work = () => {
           .fromTo(img,{rotateY: 0, filter: "blur(0px)"}, {rotateY: -180, filter: "blur(1px)"})
         })
         workImgAnimation2
-        .to(".work__img-box--section2", {top: () => 0 + "%", left: () => 53 + "%", scale: 0.733, autoAlpha: 1 })
+        .to(".work__img-box--section2", {top: () => 0 + "%", left: () => 58 + "%", scale: 0.733, autoAlpha: 1 })
         .to(".work__img-box--section", { autoAlpha: 1 }, "f")
         .to(".work__title--sci", {autoAlpha: 1}, "f")
       },

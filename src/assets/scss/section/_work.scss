@@ -22,7 +22,7 @@
     }
     &--aidt {
       top: 20vh;
-      right: 8vw;
+      right: 5vw;
     }
   }
   &__img-box {
@@ -37,8 +37,8 @@
       transform-origin: left;
       width: 100vw;
       height: 100%;
-      &1 {top: 0; left: 0%;}
-      &2 {top: 0; left: 53%;}
+      &1 {top: 0; left: 1.5%;}
+      &2 {top: 0; left: 58%;}
       .project__title {
         opacity: 0;
         position: absolute;
