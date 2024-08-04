@@ -1,7 +1,7 @@
 # 2024 포트폴리오 사이트 프로젝트
 
 📌 **배포 링크**
-[wonjun-react-portfolio] https://dnjswns619.netlify.app/
+[wonjun-react-portfolio](https://dnjswns619.netlify.app/)
 
 ## Overview
 React를 이용하여 만든 저의 포트폴리오입니다 🙂
