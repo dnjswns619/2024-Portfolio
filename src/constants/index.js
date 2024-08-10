@@ -130,7 +130,7 @@ export const portContent = [
     `,
     gitLink: `https://github.com/dnjswns619/Kream`,
     imgSrc: "kream.png",
-    pageLink: "https://dnjswns619.github.io/MCST/"
+    pageLink: "https://dnjswns619.github.io/Kream/"
   },
   {
     id: 4,
