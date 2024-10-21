@@ -104,11 +104,11 @@ export const portContent = [
     cardText : "MCST",
     skill: ["html", "css", "javascript"],
     desc: `문화체육관광부의 메인 페이지를, 접근성을 고려하며 반응형으로 클론 코딩을 진행하였습니다.<br>
-    모든 컨텐츠를 tab 키로 이동할 수 있도록 했으며 a 태그의 title, img 태그의 alt 작성, skip 메뉴 제작 등
+    모든 컨텐츠를 tab 키로 이동할 수 있도록 했으며 img 태그의 alt 작성, skip 메뉴 제작 등
     어떠한 사용자이든 모든 컨텐츠를 이해할 수 있도록 제작했습니다.`,
-    gitLink: `https://github.com/dnjswns619/MCST`,
+    gitLink: `https://github.com/dnjswns619/MCST_2024`,
     imgSrc: "MCST.png",
-    pageLink: "https://dnjswns619.github.io/MCST/"
+    pageLink: "https://dnjswns619.github.io/MCST_2024/"
   },
   {
     id: 2,
