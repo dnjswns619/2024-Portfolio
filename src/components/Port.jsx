@@ -99,12 +99,16 @@ const Port = () => {
       }
     });
 
+    const commonAnimationOption = {
+      start: "0% 65%",
+      end: "0% 30%",
+      invalidateOnRefresh: true
+    }
+
     const portText1Animation = gsap.timeline({
       scrollTrigger: {
         trigger: ".port__item:nth-child(1 of .port__item)",
-        start: "0% 65%",
-        end: "0% 30%",
-        invalidateOnRefresh: true
+        ...commonAnimationOption
       },
       ease: "none"
     })
@@ -115,9 +119,7 @@ const Port = () => {
     const portText2Animation = gsap.timeline({
       scrollTrigger: {
         trigger: ".port__item:nth-child(2 of .port__item)",
-        start: "0% 65%",
-        end: "0% 30%",
-        invalidateOnRefresh: true
+        ...commonAnimationOption
       },
       ease: "none"
     })
@@ -128,9 +130,7 @@ const Port = () => {
     const portText3Animation = gsap.timeline({
       scrollTrigger: {
         trigger: ".port__item:nth-child(3 of .port__item)",
-        start: "0% 65%",
-        end: "0% 30%",
-        invalidateOnRefresh: true
+        ...commonAnimationOption
       },
       ease: "none"
     })
@@ -141,15 +141,57 @@ const Port = () => {
     const portText4Animation = gsap.timeline({
       scrollTrigger: {
         trigger: ".port__item:nth-child(4 of .port__item)",
-        start: "0% 65%",
-        end: "0% 30%",
-        invalidateOnRefresh: true
+        ...commonAnimationOption
       },
       ease: "none"
     })
     portText4Animation
     .to(".imgBox__front h3", {"--after-width4": () => 0 + "%", duration: 1}, "b")
     .to(".port__item .projectDesc", {"--textColor-progress4": () => 100 + "%", duration: 1}, "b")
+
+    const portText5Animation = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".port__item:nth-child(5 of .port__item)",
+        ...commonAnimationOption
+      },
+      ease: "none"
+    })
+    portText5Animation
+    .to(".imgBox__front h3", {"--after-width5": () => 0 + "%", duration: 1}, "b")
+    .to(".port__item .projectDesc", {"--textColor-progress5": () => 100 + "%", duration: 1}, "b")
+
+    const portText6Animation = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".port__item:nth-child(6 of .port__item)",
+        ...commonAnimationOption
+      },
+      ease: "none"
+    })
+    portText6Animation
+    .to(".imgBox__front h3", {"--after-width6": () => 0 + "%", duration: 1}, "b")
+    .to(".port__item .projectDesc", {"--textColor-progress6": () => 100 + "%", duration: 1}, "b")
+
+    const portText7Animation = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".port__item:nth-child(7 of .port__item)",
+        ...commonAnimationOption
+      },
+      ease: "none"
+    })
+    portText7Animation
+    .to(".imgBox__front h3", {"--after-width7": () => 0 + "%", duration: 1}, "b")
+    .to(".port__item .projectDesc", {"--textColor-progress7": () => 100 + "%", duration: 1}, "b")
+
+    const portText8Animation = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".port__item:nth-child(8 of .port__item)",
+        ...commonAnimationOption
+      },
+      ease: "none"
+    })
+    portText8Animation
+    .to(".imgBox__front h3", {"--after-width8": () => 0 + "%", duration: 1}, "b")
+    .to(".port__item .projectDesc", {"--textColor-progress8": () => 100 + "%", duration: 1}, "b")
   })
 
   return (
