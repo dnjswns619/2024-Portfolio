@@ -35,11 +35,19 @@
   }
   &__info { opacity: 0; }
   &__tit { font-size: 1.2rem; color: #e65100; }
-  &__career { display: flex; }
+  &__career {
+    &-list {
+      display: flex;
+      flex-direction: column;
+    }
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 751px) {
   .footer {
-  &__career { @include flexCol-center; }
+  &__career {
+    @include flexCol-center;
+  }
 }
 }
