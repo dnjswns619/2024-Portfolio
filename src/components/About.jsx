@@ -153,11 +153,13 @@ const About = () => {
               </div>
               <div className="item__main-keyword">
                 <span className="item__main-num">
-                  <UseCountUp targetNumber={8} duration={2000} start={startAnimation1} />
+                  <UseCountUp targetNumber={33} duration={2000} start={startAnimation1} />
                   <span className="item__main-num--sub">Month+</span>
                 </span>
                 <p className="item__main-keyword--text">
-                  성실함과 책임감으로 입사 8개월 만에 선임 퍼블리셔 자리를 맡았고<br /> 현재는 주임이 되어 프로젝트를 주도적으로 진행하고 있습니다.
+                  성실함과 책임감으로 첫 직장 입사 1년차에 선임 퍼블리셔와 주임 자리를 맡았었고<br /> 웹 에이전시에서는 기획자, 디자이너와의 협업 및 고객사와 소통하며<br />
+                  약 12개의 프로젝트를 일정내에 무사히 완료해냈습니다.
+
                 </p>
               </div>
               <p className="item__sub-text">
@@ -214,20 +216,20 @@ const About = () => {
               </div>
               <div className="item__main-keyword">
                 <span className="item__main-num">
-                  <UseCountUp targetNumber={11} duration={2000} start={startAnimation2} />
+                  <UseCountUp targetNumber={23} duration={2000} start={startAnimation2} />
                   <span className="item__main-num--sub">Project</span>
                 </span>
                 <p className="item__main-keyword--text">
-                  html과 css를 주로 사용하여 웹 표준과 웹 접근성을 준수하고<br />
-                  개발팀에서 짜놓은 JS를 이해하고 응용, 수정하여 사용해 프로젝트를 제작했습니다. 
+                  html과 css, PHP를 주로 사용하여 웹 표준과 웹 접근성을 준수하고<br />
+                  JS를 이해하고 응용, 수정하여 사용해 프로젝트를 제작했습니다. 
                 </p>
               </div>
               <p className="item__sub-text item__sub-text--1">
-                현재는 더욱 성장하기 위해 react와<br />JS를 꾸준히 공부하고 있습니다.
+                현재는 인프라/시스템 엔지니어가 되기위해<br /> Linux와 네트워크를 공부하고 있으며<br /> 네트워크 관리사 자격증을 준비하고 있습니다.
               </p>
               <p className="item__sub-text item__sub-text--2">
-                총 진행 프로젝트: 11개<br />
-                회사 진행 프로젝트: 2개<br />
+                총 진행 프로젝트: 23개<br />
+                회사 진행 프로젝트: 14개<br />
                 개인 진행 프로젝트: 9개
               </p>
             </div>
