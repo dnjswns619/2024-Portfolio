@@ -17,7 +17,8 @@
     justify-content: center;
     align-items: center;
     gap: 7vw;
-    &:nth-child(1 of .port__item) {
+    &:nth-child(1 of .port__item),
+    &:nth-child(5 of .port__item) {
       .imgBox__front {
         h3 {
           --after-width1: 100%;
@@ -37,7 +38,8 @@
         }
       }
     }
-    &:nth-child(2 of .port__item) {
+    &:nth-child(2 of .port__item),
+    &:nth-child(6 of .port__item) {
       .imgBox__front {
         background-color: rgb(67, 144, 100);
         h3 {
@@ -60,7 +62,8 @@
         }
       }
     }
-    &:nth-child(3 of .port__item) {
+    &:nth-child(3 of .port__item),
+    &:nth-child(7 of .port__item) {
       .imgBox__front {
         background-color: rgb(85, 158, 97);
         h3 {
@@ -82,7 +85,8 @@
         }
       }
     }
-    &:nth-child(4 of .port__item) {
+    &:nth-child(4 of .port__item),
+    &:nth-child(8 of .port__item) {
       .imgBox__front {
         background-color: rgb(137, 204, 140);
         h3 {
