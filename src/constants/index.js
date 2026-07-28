@@ -146,9 +146,9 @@ export const portContent = [
   },
   {
     id: 5,
-    title: "갤러리아피부과 강동송파",
+    title: "Galleria Dermatory",
     cardText : "Galleria",
-    skill: ["php", "css", "javascript"],
+    skill: ["PHP", "css", "javascript"],
     desc: `갤러리아피부과 강동송파점의 모든 페이지를 담당했습니다.<br>
     gsap와 lenis를 이용해 스크롤에 따라 부드럽게 이동하며 여려 효과들이 나타나도록 제작했습니다.<br>
     php 기능을 이용해 관리자 페이지에서 팝업과 공지, 이벤트 게시물을 게시하고 삭제할 수 있도록 제작했으며 mysql에 저장되어있는 데이터들을 관리자 페이지에서 추가, 삭제, 변경할 수 있도록 제작했습니다.<br>
@@ -159,9 +159,9 @@ export const portContent = [
   },
   {
     id: 6,
-    title: "레지움피부과",
+    title: "Lasium Dermatory",
     cardText : "Lasium",
-    skill: ["php", "css", "javascript"],
+    skill: ["PHP", "css", "javascript"],
     desc: `레지움피부과의 모든 페이지를 담당했습니다.<br>
     gsap와 lenis를 이용해 스크롤에 따라 부드럽게 이동하며 여려 효과들이 나타나도록 제작했습니다.<br>
     php 기능을 이용해 관리자 페이지에서 팝업과 공지, 이벤트 게시물을 게시하고 삭제할 수 있도록 제작했으며 mysql에 저장되어있는 데이터들을 관리자 페이지에서 추가, 삭제, 변경할 수 있도록 제작했습니다.<br>
@@ -173,8 +173,9 @@ export const portContent = [
   },
   {
     id: 7,
-    title: "참조은치과",
-    skill: ["php", "css", "javascript"],
+    title: "Chamjoeun Dental Hospital",
+    cardText : "Chamjoeun",
+    skill: ["PHP", "css", "javascript"],
     desc: `참조은치과의 모든 페이지를 담당했습니다.<br>
     gsap와 lenis를 이용해 스크롤에 따라 부드럽게 이동하며 여려 효과들이 나타나도록 제작했습니다.<br>
     php 기능을 이용해 관리자 페이지에서 팝업과 공지, 이벤트 게시물을 게시하고 삭제할 수 있도록 제작했으며 mysql에 저장되어있는 데이터들을 관리자 페이지에서 추가, 삭제, 변경할 수 있도록 제작했습니다.<br>
