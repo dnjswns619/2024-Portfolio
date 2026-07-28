@@ -41,8 +41,11 @@ const Footer = () => {
             })
           }
         </p>
-        <p className="footer__career footer__info">
-          <span className="footer__tit">Career :</span> <span>아이스캔디</span> 2023.03 ~</p>
+        <div className="footer__career footer__info">
+          <span className="footer__tit">Career :</span> 
+          <p><span>아이스캔디</span> 2023.03 ~ 2024.12</p>
+          <p><span>파인애플피티엘</span> 2024.12 ~ 2025.12</p>
+        </div>
         <p className="footer__tel footer__info">
           <span className="footer__tit">Tel :</span> 010-8329-0566</p>
         <p className="footer__github footer__info">
