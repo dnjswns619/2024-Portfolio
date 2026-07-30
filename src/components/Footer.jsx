@@ -9,7 +9,7 @@ const Footer = () => {
       scrollTrigger: {
         trigger: "#footer",
         start: "0% 0%",
-        end: "100% 100%",
+        end: "90% 100%",
         scrub: 0,
       }
     })
